@@ -1,90 +1,208 @@
 {
   "brand": "InstallMyClaw",
-  "updated_at": "2026-08-12T14:33:00Z",
+  "updated_at": "2026-08-12T15:07:45Z",
   "channels": [
-    {"platform":"instagram","name":"InstallMyClaw","username":"installmyclaw","status":"active","account_id":"acc_01KZB4GM5B4QV872A6T4AGQ6GQ"},
-    {"platform":"facebook","name":"Installmyclaw","username":"Installmyclaw","status":"active","account_id":"acc_01KX307TMNV5QXHY20YP0H94GY","page":"Installmyclaw"},
-    {"platform":"youtube","name":"InstallMyClaw","username":"@installmyclaw","status":"active","account_id":"acc_01KY9VG90637YSKHFSX05YJH92"},
-    {"platform":"threads","name":"Tan Jun Wei","username":"justintan.my","status":"active","account_id":"acc_01KY9VMZ03PHTDVQT1TR5E1VX3"},
-    {"platform":"twitter","name":"justintan","username":"junwei1213","status":"active","account_id":"acc_01KX5K2272MX97Q29XS64K9SK0"}
+    {
+      "platform": "instagram",
+      "name": "InstallMyClaw",
+      "username": "installmyclaw",
+      "status": "active",
+      "account_id": "acc_01KZB4GM5B4QV872A6T4AGQ6GQ"
+    },
+    {
+      "platform": "facebook",
+      "name": "Installmyclaw",
+      "username": "Installmyclaw",
+      "status": "active",
+      "account_id": "acc_01KX307TMNV5QXHY20YP0H94GY",
+      "page": "Installmyclaw"
+    },
+    {
+      "platform": "youtube",
+      "name": "InstallMyClaw",
+      "username": "@installmyclaw",
+      "status": "active",
+      "account_id": "acc_01KY9VG90637YSKHFSX05YJH92"
+    },
+    {
+      "platform": "threads",
+      "name": "Tan Jun Wei",
+      "username": "justintan.my",
+      "status": "active",
+      "account_id": "acc_01KY9VMZ03PHTDVQT1TR5E1VX3"
+    },
+    {
+      "platform": "twitter",
+      "name": "justintan",
+      "username": "junwei1213",
+      "status": "active",
+      "account_id": "acc_01KX5K2272MX97Q29XS64K9SK0"
+    }
   ],
   "posts": [
     {
-      "id":"bcd148dd-43fe-485b-bb7d-ace5897e9db0",
-      "title":"学员分享｜Kiyo：用 AI 把想法做成 Website",
-      "published_at":"2026-08-12T12:36:13Z",
-      "permalinks":{"instagram":"https://www.instagram.com/reel/Db8LUTCguwb/"},
-      "platforms":["instagram"],
-      "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
+      "id": "bcd148dd-43fe-485b-bb7d-ace5897e9db0",
+      "title": "学员分享｜Kiyo：用 AI 把想法做成 Website",
+      "published_at": "2026-08-12T12:36:13Z",
+      "permalinks": {
+        "instagram": "https://www.instagram.com/reel/Db8LUTCguwb/"
+      },
+      "platforms": [
+        "instagram"
+      ],
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
     },
     {
-      "id":"eac37acb-e167-4858-bc47-9bbe923d1b34",
-      "title":"学员分享｜Sharon：用 ChatGPT 做招聘网站",
-      "published_at":"2026-08-12T12:16:33Z",
-      "permalinks":{"instagram":"https://www.instagram.com/reel/Db8JCRXl06i/"},
-      "platforms":["instagram"],
-      "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
+      "id": "eac37acb-e167-4858-bc47-9bbe923d1b34",
+      "title": "学员分享｜Sharon：用 ChatGPT 做招聘网站",
+      "published_at": "2026-08-12T12:16:33Z",
+      "permalinks": {
+        "instagram": "https://www.instagram.com/reel/Db8JCRXl06i/"
+      },
+      "platforms": [
+        "instagram"
+      ],
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
     },
     {
-      "id":"9f8d1fa5-06b1-4cac-a686-5e79cf750b9b",
-      "title":"学员分享｜Sharon：用 ChatGPT 做招聘网站",
-      "published_at":"2026-08-12T12:14:54Z",
-      "permalinks":{"facebook":"https://www.facebook.com/reel/1088205987073864/","youtube":"https://www.youtube.com/watch?v=WFn4E2EAnP8"},
-      "platforms":["facebook","youtube"],
-      "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
+      "id": "9f8d1fa5-06b1-4cac-a686-5e79cf750b9b",
+      "title": "学员分享｜Sharon：用 ChatGPT 做招聘网站",
+      "published_at": "2026-08-12T12:14:54Z",
+      "permalinks": {
+        "facebook": "https://www.facebook.com/reel/1088205987073864/",
+        "youtube": "https://www.youtube.com/watch?v=WFn4E2EAnP8"
+      },
+      "platforms": [
+        "facebook",
+        "youtube"
+      ],
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
     },
     {
-      "id":"479d5efe-3ab7-4a48-a591-5a71b3f0d329",
-      "title":"学员分享｜Joey：用 ChatGPT 当天完成个人网站",
-      "published_at":"2026-08-11T15:15:19Z",
-      "permalinks":{"facebook":"https://www.facebook.com/reel/1401908945198593/","instagram":"https://www.instagram.com/reel/Db54tEqE041/","youtube":"https://www.youtube.com/watch?v=GRuDW3pP4iY"},
-      "platforms":["facebook","instagram","youtube"],
-      "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
+      "id": "479d5efe-3ab7-4a48-a591-5a71b3f0d329",
+      "title": "学员分享｜Joey：用 ChatGPT 当天完成个人网站",
+      "published_at": "2026-08-11T15:15:19Z",
+      "permalinks": {
+        "facebook": "https://www.facebook.com/reel/1401908945198593/",
+        "instagram": "https://www.instagram.com/reel/Db54tEqE041/",
+        "youtube": "https://www.youtube.com/watch?v=GRuDW3pP4iY"
+      },
+      "platforms": [
+        "facebook",
+        "instagram",
+        "youtube"
+      ],
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
     },
     {
-      "id":"86604d4d-583c-46ee-9049-c90cb265d6a6",
-      "title":"学员分享｜Kiyo：用 AI 把想法做成 Website",
-      "published_at":"2026-08-10T14:37:44Z",
-      "permalinks":{"facebook":"https://www.facebook.com/reel/1011741281682415/"},
-      "platforms":["facebook"],
-      "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
+      "id": "86604d4d-583c-46ee-9049-c90cb265d6a6",
+      "title": "学员分享｜Kiyo：用 AI 把想法做成 Website",
+      "published_at": "2026-08-10T14:37:44Z",
+      "permalinks": {
+        "facebook": "https://www.facebook.com/reel/1011741281682415/"
+      },
+      "platforms": [
+        "facebook"
+      ],
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
     },
     {
-      "id":"ig-lawrence",
-      "title":"学员分享｜Lawrence：当天完成 Website + WhatsApp",
-      "published_at":"2026-08-09T19:36:37Z",
-      "permalinks":{"instagram":"https://www.instagram.com/reel/Db1NDg1EUd2/"},
-      "platforms":["instagram"],
-      "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
+      "id": "ig-lawrence",
+      "title": "学员分享｜Lawrence：当天完成 Website + WhatsApp",
+      "published_at": "2026-08-09T19:36:37Z",
+      "permalinks": {
+        "instagram": "https://www.instagram.com/reel/Db1NDg1EUd2/"
+      },
+      "platforms": [
+        "instagram"
+      ],
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
     },
     {
-      "id":"8c2f5e22-ac90-4b51-8ffc-d51fb974457a",
-      "title":"AI 个人网站实战班圆满落幕",
-      "published_at":"2026-08-08T17:55:24Z",
-      "permalinks":{"instagram":"https://www.instagram.com/p/DbyctRmI3BK/"},
-      "platforms":["instagram"],
-      "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
+      "id": "8c2f5e22-ac90-4b51-8ffc-d51fb974457a",
+      "title": "AI 个人网站实战班圆满落幕",
+      "published_at": "2026-08-08T17:55:24Z",
+      "permalinks": {
+        "instagram": "https://www.instagram.com/p/DbyctRmI3BK/"
+      },
+      "platforms": [
+        "instagram"
+      ],
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
     },
     {
-      "id":"ig-minimax",
-      "title":"MiniMax H3：AI 视频生成走向普通人",
-      "published_at":"2026-08-06T09:33:07Z",
-      "permalinks":{"instagram":"https://www.instagram.com/reel/DbsZm4OCvah/"},
-      "platforms":["instagram"],
-      "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
+      "id": "ig-minimax",
+      "title": "MiniMax H3：AI 视频生成走向普通人",
+      "published_at": "2026-08-06T09:33:07Z",
+      "permalinks": {
+        "instagram": "https://www.instagram.com/reel/DbsZm4OCvah/"
+      },
+      "platforms": [
+        "instagram"
+      ],
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
     },
     {
-      "id":"ig-poster-aug4",
-      "title":"给自己做一个「专属主页」海报",
-      "published_at":"2026-08-04T08:35:34Z",
-      "permalinks":{"instagram":"https://www.instagram.com/p/DbnJet-oKkt/"},
-      "platforms":["instagram"],
-      "metrics":{"views":0,"likes":1,"comments":0,"shares":0,"saves":0}
+      "id": "ig-poster-aug4",
+      "title": "给自己做一个「专属主页」海报",
+      "published_at": "2026-08-04T08:35:34Z",
+      "permalinks": {
+        "instagram": "https://www.instagram.com/p/DbnJet-oKkt/"
+      },
+      "platforms": [
+        "instagram"
+      ],
+      "metrics": {
+        "likes": 1,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
     }
   ],
   "notes": [
-    "Metrics from SocialAPI live sync + Instagram analytics export (2026-08-12).",
-    "View counts may lag or be unavailable for Facebook via API.",
-    "Instagram export currently reports 0 views on most recent reels."
+    "指标来自 SocialAPI 单帖 live metrics（likes / comments / shares / saves）。",
+    "观看数未展示：单帖 metrics 官方不返回 views；export 的 view_count 目前也不可用。",
+    "Facebook 互动有时不同步，数字可能落后于 App 原生 Insights。"
   ]
 }
