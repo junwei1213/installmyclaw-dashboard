@@ -6,752 +6,325 @@
   <title>InstallMyClaw Social Tracker</title>
   <style>
     :root {
-      --bg: #0b0f17;
-      --bg-elevated: #121826;
-      --bg-card: #161d2b;
-      --bg-card-hover: #1c2538;
-      --border: rgba(255, 255, 255, 0.08);
-      --border-strong: rgba(255, 255, 255, 0.14);
-      --text: #eef2ff;
-      --text-muted: #93a0b8;
-      --text-dim: #6b778f;
-      --accent: #7c9cff;
-      --accent-soft: rgba(124, 156, 255, 0.14);
-      --success: #3dd68c;
-      --success-soft: rgba(61, 214, 140, 0.14);
+      --bg: #070a12;
+      --bg-card: #121826;
+      --bg-card-2: #171f30;
+      --border: rgba(255,255,255,.08);
+      --border-2: rgba(255,255,255,.14);
+      --text: #f3f6ff;
+      --muted: #97a3bb;
+      --dim: #6b778f;
+      --accent: #8aa4ff;
+      --ok: #3dd68c;
+      --ok-soft: rgba(61,214,140,.14);
       --warn: #f5c14a;
-      --warn-soft: rgba(245, 193, 74, 0.14);
-      --danger: #ff7a8a;
-      --ig: #f56040;
-      --fb: #1877f2;
-      --yt: #ff0033;
-      --th: #f8fafc;
-      --x: #e7e9ea;
-      --radius: 16px;
-      --radius-sm: 10px;
-      --shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+      --warn-soft: rgba(245,193,74,.12);
+      --ig: #E1306C;
+      --fb: #1877F2;
+      --yt: #FF0000;
+      --th: #fff;
+      --x: #fff;
+      --radius: 18px;
+      --shadow: 0 16px 50px rgba(0,0,0,.4);
       --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     }
-
     * { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; }
     body {
       font-family: var(--font);
-      background:
-        radial-gradient(1200px 600px at 10% -10%, rgba(124, 156, 255, 0.18), transparent 55%),
-        radial-gradient(900px 500px at 90% 0%, rgba(61, 214, 140, 0.08), transparent 50%),
-        var(--bg);
       color: var(--text);
       min-height: 100vh;
-      line-height: 1.5;
+      background:
+        radial-gradient(1000px 520px at 8% -8%, rgba(138,164,255,.22), transparent 55%),
+        radial-gradient(800px 420px at 92% 0%, rgba(225,48,108,.12), transparent 50%),
+        radial-gradient(700px 400px at 50% 100%, rgba(24,119,242,.08), transparent 50%),
+        var(--bg);
       -webkit-font-smoothing: antialiased;
     }
-
     a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    .wrap {
-      width: min(1180px, calc(100% - 32px));
-      margin: 0 auto;
-      padding: 28px 0 56px;
-    }
+    .wrap { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 56px; }
 
     header.top {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 16px 24px;
-      margin-bottom: 28px;
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px 24px;
+      align-items: center; margin-bottom: 28px;
     }
-
-    .brand-block { display: flex; gap: 14px; align-items: center; }
-    .logo {
-      width: 48px; height: 48px; border-radius: 14px;
-      background: linear-gradient(145deg, #8ea8ff, #4f6fff 55%, #2dd4a8);
-      display: grid; place-items: center;
-      font-weight: 800; letter-spacing: -0.03em;
-      color: #081018; box-shadow: var(--shadow);
-      flex-shrink: 0;
+    .brand { display: flex; gap: 14px; align-items: center; }
+    .brand-avatar {
+      width: 56px; height: 56px; border-radius: 16px; object-fit: cover;
+      border: 1px solid var(--border-2); box-shadow: var(--shadow); background: #111;
     }
-    .brand-block h1 {
-      margin: 0;
-      font-size: clamp(1.35rem, 2.4vw, 1.75rem);
-      font-weight: 750;
-      letter-spacing: -0.02em;
-    }
-    .brand-block p {
-      margin: 4px 0 0;
-      color: var(--text-muted);
-      font-size: 0.92rem;
-    }
-
+    .brand h1 { margin: 0; font-size: clamp(1.4rem, 2.5vw, 1.85rem); letter-spacing: -.02em; font-weight: 780; }
+    .brand p { margin: 4px 0 0; color: var(--muted); font-size: .92rem; }
     .meta-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 14px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      color: var(--text-muted);
-      font-size: 0.875rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 14px; border-radius: 999px;
+      background: rgba(18,24,38,.9); border: 1px solid var(--border); color: var(--muted); font-size: .875rem;
+      backdrop-filter: blur(8px);
     }
-    .meta-pill strong { color: var(--text); font-weight: 600; }
-    .dot {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: var(--success);
-      box-shadow: 0 0 0 4px var(--success-soft);
-    }
+    .meta-pill strong { color: var(--text); }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 0 4px var(--ok-soft); }
 
     section { margin-bottom: 28px; }
-    .section-head {
-      display: flex; align-items: baseline; justify-content: space-between;
-      gap: 12px; margin-bottom: 12px;
-    }
+    .section-head { display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 12px; }
     .section-head h2 {
-      margin: 0;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-dim);
+      margin: 0; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--dim); font-weight: 750;
     }
 
-    .kpi-grid {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 12px;
-    }
-
+    .kpi-grid { display:grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 12px; }
     .kpi {
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), transparent), var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 18px 16px;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-      min-height: 110px;
+      background: linear-gradient(180deg, rgba(255,255,255,.03), transparent), var(--bg-card);
+      border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 16px;
+      box-shadow: var(--shadow); min-height: 112px; position: relative; overflow: hidden;
     }
     .kpi::after {
-      content: "";
-      position: absolute; inset: auto -20% -40% auto;
-      width: 120px; height: 120px; border-radius: 50%;
-      background: var(--accent-soft);
-      filter: blur(8px);
-      pointer-events: none;
+      content:""; position:absolute; right:-24px; bottom:-36px; width:110px; height:110px; border-radius:50%;
+      background: rgba(138,164,255,.12); filter: blur(2px);
     }
-    .kpi .label {
-      color: var(--text-muted);
-      font-size: 0.82rem;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-    .kpi .value {
-      font-size: clamp(1.6rem, 3vw, 2rem);
-      font-weight: 750;
-      letter-spacing: -0.03em;
-      font-variant-numeric: tabular-nums;
-    }
-    .kpi .hint {
-      margin-top: 6px;
-      color: var(--text-dim);
-      font-size: 0.75rem;
-    }
+    .kpi .label { color: var(--muted); font-size: .82rem; font-weight: 650; margin-bottom: 10px; }
+    .kpi .value { font-size: clamp(1.55rem, 3vw, 2rem); font-weight: 780; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+    .kpi .hint { margin-top: 6px; color: var(--dim); font-size: .74rem; }
 
-    .channel-grid {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 12px;
-    }
-
+    .channel-grid { display:grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 12px; }
     .channel {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 16px;
-      transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 16px; transition: .15s ease; min-height: 148px;
     }
-    .channel:hover {
-      background: var(--bg-card-hover);
-      border-color: var(--border-strong);
-      transform: translateY(-1px);
+    .channel:hover { background: var(--bg-card-2); border-color: var(--border-2); transform: translateY(-1px); }
+    .channel-top { display:flex; justify-content:space-between; align-items:center; gap: 8px; margin-bottom: 14px; }
+    .plat {
+      display:inline-flex; align-items:center; gap: 8px;
+      padding: 6px 10px; border-radius: 999px; font-size: .78rem; font-weight: 750;
+      border: 1px solid var(--border); background: rgba(255,255,255,.04);
     }
-    .channel-top {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 8px; margin-bottom: 12px;
+    .plat .ico, .chip .ico, .links a .ico {
+      width: 16px; height: 16px; display:inline-grid; place-items:center; flex-shrink: 0;
     }
-    .plat-badge {
-      display: inline-flex; align-items: center; gap: 7px;
-      font-size: 0.78rem; font-weight: 700;
-      padding: 5px 9px; border-radius: 999px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--border);
-      text-transform: capitalize;
+    .plat .ico svg, .chip .ico svg, .links a .ico svg { width: 16px; height: 16px; display:block; }
+    .plat.instagram { background: rgba(225,48,108,.12); border-color: rgba(225,48,108,.35); color: #ffb1c9; }
+    .plat.facebook { background: rgba(24,119,242,.12); border-color: rgba(24,119,242,.35); color: #9dc2ff; }
+    .plat.youtube { background: rgba(255,0,0,.12); border-color: rgba(255,0,0,.35); color: #ff9aa3; }
+    .plat.threads { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.2); color: #fff; }
+    .plat.twitter, .plat.x { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.2); color: #fff; }
+    .status {
+      font-size: .7rem; font-weight: 750; letter-spacing: .04em; text-transform: uppercase;
+      color: var(--ok); background: var(--ok-soft); border: 1px solid rgba(61,214,140,.25);
+      padding: 4px 8px; border-radius: 999px;
     }
-    .plat-dot {
-      width: 8px; height: 8px; border-radius: 50%;
-    }
-    .plat-instagram .plat-dot { background: var(--ig); }
-    .plat-facebook .plat-dot { background: var(--fb); }
-    .plat-youtube .plat-dot { background: var(--yt); }
-    .plat-threads .plat-dot { background: var(--th); }
-    .plat-twitter .plat-dot, .plat-x .plat-dot { background: var(--x); }
-
-    .status-chip {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--success);
-      background: var(--success-soft);
-      border: 1px solid rgba(61, 214, 140, 0.25);
-      padding: 4px 8px;
-      border-radius: 999px;
-    }
-    .channel h3 {
-      margin: 0 0 4px;
-      font-size: 0.98rem;
-      font-weight: 700;
-    }
-    .channel .handle {
-      color: var(--text-muted);
-      font-size: 0.84rem;
-      margin-bottom: 10px;
-    }
-    .channel .meta {
-      color: var(--text-dim);
-      font-size: 0.72rem;
-      font-family: var(--mono);
-      word-break: break-all;
-      line-height: 1.4;
-    }
+    .channel h3 { margin: 0 0 4px; font-size: 1rem; }
+    .channel .handle { color: var(--muted); font-size: .86rem; margin-bottom: 10px; }
+    .channel .page { color: var(--dim); font-size: .75rem; }
 
     .table-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow);
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+      overflow: hidden; box-shadow: var(--shadow);
     }
-
-    .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-
-    table.posts {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 860px;
+    .table-scroll { overflow-x: auto; }
+    table.posts { width: 100%; border-collapse: collapse; min-width: 900px; }
+    th, td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th {
+      font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--dim);
+      background: rgba(255,255,255,.02); font-weight: 750; white-space: nowrap;
     }
-    table.posts th,
-    table.posts td {
-      padding: 14px 16px;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-      vertical-align: top;
-    }
-    table.posts th {
-      font-size: 0.72rem;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      background: rgba(255,255,255,0.02);
-      font-weight: 700;
-      white-space: nowrap;
-    }
-    table.posts tbody tr:last-child td { border-bottom: none; }
-    table.posts tbody tr:hover td { background: rgba(255,255,255,0.02); }
-
-    .date-cell {
-      white-space: nowrap;
-      color: var(--text-muted);
-      font-size: 0.86rem;
-      font-variant-numeric: tabular-nums;
-    }
-    .date-cell .time {
-      display: block;
-      color: var(--text-dim);
-      font-size: 0.75rem;
-      margin-top: 2px;
-    }
-
-    .title-cell { max-width: 340px; }
-    .title-cell .title {
-      font-weight: 650;
-      font-size: 0.94rem;
-      margin-bottom: 6px;
-    }
-    .links { display: flex; flex-wrap: wrap; gap: 6px; }
-    .links a {
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--border);
-      padding: 2px 8px;
-      border-radius: 999px;
-    }
-    .links a:hover { color: var(--text); border-color: var(--border-strong); text-decoration: none; }
-
-    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover td { background: rgba(255,255,255,.02); }
+    .date-cell { white-space: nowrap; color: var(--muted); font-size: .86rem; font-variant-numeric: tabular-nums; }
+    .date-cell .time { display:block; color: var(--dim); font-size: .74rem; margin-top: 2px; }
+    .title-cell { max-width: 360px; }
+    .title-cell .title { font-weight: 680; font-size: .94rem; margin-bottom: 8px; }
+    .chips, .links { display:flex; flex-wrap:wrap; gap: 6px; }
     .chip {
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 3px 8px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.04);
+      display:inline-flex; align-items:center; gap: 6px;
+      font-size: .72rem; font-weight: 750; padding: 4px 9px; border-radius: 999px;
+      border: 1px solid var(--border); background: rgba(255,255,255,.04); color: var(--muted);
       text-transform: capitalize;
-      color: var(--text-muted);
     }
-    .chip.instagram { color: #ffb39a; border-color: rgba(245,96,64,0.35); background: rgba(245,96,64,0.1); }
-    .chip.facebook { color: #8ab4ff; border-color: rgba(24,119,242,0.35); background: rgba(24,119,242,0.12); }
-    .chip.youtube { color: #ff8a9b; border-color: rgba(255,0,51,0.35); background: rgba(255,0,51,0.12); }
-    .chip.threads { color: #f1f5f9; border-color: rgba(248,250,252,0.25); }
-    .chip.twitter, .chip.x { color: #e7e9ea; border-color: rgba(231,233,234,0.25); }
-
-    .pub-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.78rem;
-      font-weight: 650;
-      color: var(--success);
-      background: var(--success-soft);
-      border: 1px solid rgba(61, 214, 140, 0.22);
-      padding: 4px 9px;
-      border-radius: 999px;
-      white-space: nowrap;
+    .chip.instagram { color:#ffb1c9; border-color:rgba(225,48,108,.35); background:rgba(225,48,108,.1); }
+    .chip.facebook { color:#9dc2ff; border-color:rgba(24,119,242,.35); background:rgba(24,119,242,.12); }
+    .chip.youtube { color:#ff9aa3; border-color:rgba(255,0,0,.35); background:rgba(255,0,0,.1); }
+    .chip.threads, .chip.twitter, .chip.x { color:#fff; border-color:rgba(255,255,255,.22); }
+    .links a {
+      display:inline-flex; align-items:center; gap: 6px;
+      font-size: .72rem; color: var(--muted); background: rgba(255,255,255,.04);
+      border: 1px solid var(--border); padding: 3px 9px; border-radius: 999px;
     }
-    .pub-status::before {
-      content: "";
-      width: 6px; height: 6px; border-radius: 50%;
-      background: currentColor;
+    .links a:hover { color: var(--text); border-color: var(--border-2); }
+    .pub {
+      display:inline-flex; align-items:center; gap: 6px; font-size: .78rem; font-weight: 680;
+      color: var(--ok); background: var(--ok-soft); border: 1px solid rgba(61,214,140,.22);
+      padding: 4px 9px; border-radius: 999px; white-space: nowrap;
     }
-
-    .metrics-row {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(52px, 1fr));
-      gap: 8px;
-      min-width: 240px;
-    }
-    .metric-pill {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 6px 8px;
-      text-align: center;
-    }
-    .metric-pill .n {
-      display: block;
-      font-weight: 700;
-      font-variant-numeric: tabular-nums;
-      font-size: 0.9rem;
-    }
-    .metric-pill .l {
-      display: block;
-      color: var(--text-dim);
-      font-size: 0.68rem;
-      margin-top: 2px;
-    }
+    .pub::before { content:""; width:6px; height:6px; border-radius:50%; background: currentColor; }
+    .metrics { display:grid; grid-template-columns: repeat(4, minmax(52px,1fr)); gap: 8px; min-width: 240px; }
+    .metric { background: rgba(255,255,255,.03); border: 1px solid var(--border); border-radius: 10px; padding: 6px 8px; text-align:center; }
+    .metric .n { display:block; font-weight: 750; font-variant-numeric: tabular-nums; }
+    .metric .l { display:block; color: var(--dim); font-size: .68rem; margin-top: 2px; }
 
     .notes {
-      background: linear-gradient(135deg, var(--warn-soft), transparent 60%), var(--bg-card);
-      border: 1px solid rgba(245, 193, 74, 0.28);
-      border-radius: var(--radius);
-      padding: 18px 20px;
-      box-shadow: var(--shadow);
+      background: linear-gradient(135deg, var(--warn-soft), transparent 55%), var(--bg-card);
+      border: 1px solid rgba(245,193,74,.28); border-radius: var(--radius); padding: 18px 20px; box-shadow: var(--shadow);
     }
-    .notes h2 {
-      margin: 0 0 10px;
-      font-size: 0.95rem;
-      color: var(--warn);
-      letter-spacing: 0;
-      text-transform: none;
-      font-weight: 750;
-    }
-    .notes ul {
-      margin: 0;
-      padding-left: 18px;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
+    .notes h2 { margin: 0 0 10px; font-size: .95rem; color: var(--warn); text-transform: none; letter-spacing: 0; font-weight: 750; }
+    .notes ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: .9rem; }
     .notes li { margin: 6px 0; }
-
-    footer.foot {
-      margin-top: 8px;
-      color: var(--text-dim);
-      font-size: 0.78rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 16px;
-      justify-content: space-between;
-    }
-
-    .loading, .error {
-      padding: 28px;
-      text-align: center;
-      color: var(--text-muted);
-      border: 1px dashed var(--border);
-      border-radius: var(--radius);
-      background: var(--bg-elevated);
-    }
-    .error { color: var(--danger); border-color: rgba(255,122,138,0.35); }
+    footer { margin-top: 10px; color: var(--dim); font-size: .78rem; display:flex; flex-wrap:wrap; gap: 8px 16px; justify-content: space-between; }
+    .logo-row { display:flex; gap: 10px; align-items:center; color: var(--dim); }
+    #foot-logos .mini { width: 18px; height: 18px; opacity: .9; display:inline-grid; }
+    #foot-logos .mini svg { width: 18px; height: 18px; }
 
     @media (max-width: 980px) {
-      .kpi-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .channel-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .kpi-grid, .channel-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
     }
-    @media (max-width: 720px) {
-      .wrap { width: min(100% - 24px, 1180px); padding-top: 20px; }
-      .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .channel-grid { grid-template-columns: 1fr 1fr; }
-      .kpi:last-child { grid-column: 1 / -1; }
-    }
-    @media (max-width: 480px) {
-      .channel-grid { grid-template-columns: 1fr; }
+    @media (max-width: 560px) {
+      .kpi-grid, .channel-grid { grid-template-columns: 1fr; }
+      .wrap { width: calc(100% - 24px); }
     }
   </style>
 </head>
 <body>
   <div class="wrap" id="app">
-    <div class="loading">加载中…</div>
+    <header class="top">
+      <div class="brand">
+        <img class="brand-avatar" src="assets/installmyclaw.jpg" alt="InstallMyClaw" width="56" height="56" />
+        <div>
+          <h1>InstallMyClaw Social Tracker</h1>
+          <p>社交发布指标看板 · SocialAPI brand sync</p>
+        </div>
+      </div>
+      <div class="meta-pill"><span class="dot"></span>更新时间 <strong id="updated">—</strong></div>
+    </header>
+
+    <section>
+      <div class="section-head"><h2>核心指标</h2></div>
+      <div class="kpi-grid" id="kpis"></div>
+    </section>
+
+    <section>
+      <div class="section-head"><h2>渠道</h2></div>
+      <div class="channel-grid" id="channels"></div>
+    </section>
+
+    <section>
+      <div class="section-head"><h2>最近帖子</h2></div>
+      <div class="table-card"><div class="table-scroll">
+        <table class="posts">
+          <thead>
+            <tr>
+              <th>日期</th><th>内容</th><th>平台</th><th>状态</th><th>互动</th>
+            </tr>
+          </thead>
+          <tbody id="posts"></tbody>
+        </table>
+      </div></div>
+    </section>
+
+    <section class="notes">
+      <h2>说明</h2>
+      <ul id="notes"></ul>
+    </section>
+
+    <footer>
+      <div class="logo-row">
+        <span id="foot-logos" style="display:inline-flex;gap:8px;align-items:center"></span>
+        <span>Official platform marks · InstallMyClaw only</span>
+      </div>
+      <div>Timezone: Asia/Kuala_Lumpur</div>
+    </footer>
   </div>
 
   <script>
-    const FALLBACK_DATA = {
-      "brand": "InstallMyClaw",
-      "updated_at": "2026-08-12T14:33:00Z",
-      "channels": [
-        {"platform":"instagram","name":"InstallMyClaw","username":"installmyclaw","status":"active","account_id":"acc_01KZB4GM5B4QV872A6T4AGQ6GQ"},
-        {"platform":"facebook","name":"Installmyclaw","username":"Installmyclaw","status":"active","account_id":"acc_01KX307TMNV5QXHY20YP0H94GY","page":"Installmyclaw"},
-        {"platform":"youtube","name":"InstallMyClaw","username":"@installmyclaw","status":"active","account_id":"acc_01KY9VG90637YSKHFSX05YJH92"},
-        {"platform":"threads","name":"Tan Jun Wei","username":"justintan.my","status":"active","account_id":"acc_01KY9VMZ03PHTDVQT1TR5E1VX3"},
-        {"platform":"twitter","name":"justintan","username":"junwei1213","status":"active","account_id":"acc_01KX5K2272MX97Q29XS64K9SK0"}
-      ],
-      "posts": [
-        {
-          "id":"bcd148dd-43fe-485b-bb7d-ace5897e9db0",
-          "title":"学员分享｜Kiyo：用 AI 把想法做成 Website",
-          "published_at":"2026-08-12T12:36:13Z",
-          "permalinks":{"instagram":"https://www.instagram.com/reel/Db8LUTCguwb/"},
-          "platforms":["instagram"],
-          "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
-        },
-        {
-          "id":"eac37acb-e167-4858-bc47-9bbe923d1b34",
-          "title":"学员分享｜Sharon：用 ChatGPT 做招聘网站",
-          "published_at":"2026-08-12T12:16:33Z",
-          "permalinks":{"instagram":"https://www.instagram.com/reel/Db8JCRXl06i/"},
-          "platforms":["instagram"],
-          "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
-        },
-        {
-          "id":"9f8d1fa5-06b1-4cac-a686-5e79cf750b9b",
-          "title":"学员分享｜Sharon：用 ChatGPT 做招聘网站",
-          "published_at":"2026-08-12T12:14:54Z",
-          "permalinks":{"facebook":"https://www.facebook.com/reel/1088205987073864/","youtube":"https://www.youtube.com/watch?v=WFn4E2EAnP8"},
-          "platforms":["facebook","youtube"],
-          "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
-        },
-        {
-          "id":"479d5efe-3ab7-4a48-a591-5a71b3f0d329",
-          "title":"学员分享｜Joey：用 ChatGPT 当天完成个人网站",
-          "published_at":"2026-08-11T15:15:19Z",
-          "permalinks":{"facebook":"https://www.facebook.com/reel/1401908945198593/","instagram":"https://www.instagram.com/reel/Db54tEqE041/","youtube":"https://www.youtube.com/watch?v=GRuDW3pP4iY"},
-          "platforms":["facebook","instagram","youtube"],
-          "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
-        },
-        {
-          "id":"86604d4d-583c-46ee-9049-c90cb265d6a6",
-          "title":"学员分享｜Kiyo：用 AI 把想法做成 Website",
-          "published_at":"2026-08-10T14:37:44Z",
-          "permalinks":{"facebook":"https://www.facebook.com/reel/1011741281682415/"},
-          "platforms":["facebook"],
-          "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
-        },
-        {
-          "id":"ig-lawrence",
-          "title":"学员分享｜Lawrence：当天完成 Website + WhatsApp",
-          "published_at":"2026-08-09T19:36:37Z",
-          "permalinks":{"instagram":"https://www.instagram.com/reel/Db1NDg1EUd2/"},
-          "platforms":["instagram"],
-          "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
-        },
-        {
-          "id":"8c2f5e22-ac90-4b51-8ffc-d51fb974457a",
-          "title":"AI 个人网站实战班圆满落幕",
-          "published_at":"2026-08-08T17:55:24Z",
-          "permalinks":{"instagram":"https://www.instagram.com/p/DbyctRmI3BK/"},
-          "platforms":["instagram"],
-          "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
-        },
-        {
-          "id":"ig-minimax",
-          "title":"MiniMax H3：AI 视频生成走向普通人",
-          "published_at":"2026-08-06T09:33:07Z",
-          "permalinks":{"instagram":"https://www.instagram.com/reel/DbsZm4OCvah/"},
-          "platforms":["instagram"],
-          "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
-        },
-        {
-          "id":"ig-poster-aug4",
-          "title":"给自己做一个「专属主页」海报",
-          "published_at":"2026-08-04T08:35:34Z",
-          "permalinks":{"instagram":"https://www.instagram.com/p/DbnJet-oKkt/"},
-          "platforms":["instagram"],
-          "metrics":{"views":0,"likes":1,"comments":0,"shares":0,"saves":0}
-        }
-      ],
-      "notes": [
-        "Metrics from SocialAPI live sync + Instagram analytics export (2026-08-12).",
-        "View counts may lag or be unavailable for Facebook via API.",
-        "Instagram export currently reports 0 views on most recent reels."
-      ]
+    const FALLBACK_DATA = {"brand": "InstallMyClaw", "updated_at": "2026-08-12T14:33:00Z", "channels": [{"platform": "instagram", "name": "InstallMyClaw", "username": "installmyclaw", "status": "active", "account_id": "acc_01KZB4GM5B4QV872A6T4AGQ6GQ"}, {"platform": "facebook", "name": "Installmyclaw", "username": "Installmyclaw", "status": "active", "account_id": "acc_01KX307TMNV5QXHY20YP0H94GY", "page": "Installmyclaw"}, {"platform": "youtube", "name": "InstallMyClaw", "username": "@installmyclaw", "status": "active", "account_id": "acc_01KY9VG90637YSKHFSX05YJH92"}, {"platform": "threads", "name": "Tan Jun Wei", "username": "justintan.my", "status": "active", "account_id": "acc_01KY9VMZ03PHTDVQT1TR5E1VX3"}, {"platform": "twitter", "name": "justintan", "username": "junwei1213", "status": "active", "account_id": "acc_01KX5K2272MX97Q29XS64K9SK0"}], "posts": [{"id": "bcd148dd-43fe-485b-bb7d-ace5897e9db0", "title": "学员分享｜Kiyo：用 AI 把想法做成 Website", "published_at": "2026-08-12T12:36:13Z", "permalinks": {"instagram": "https://www.instagram.com/reel/Db8LUTCguwb/"}, "platforms": ["instagram"], "metrics": {"views": 0, "likes": 0, "comments": 0, "shares": 0, "saves": 0}}, {"id": "eac37acb-e167-4858-bc47-9bbe923d1b34", "title": "学员分享｜Sharon：用 ChatGPT 做招聘网站", "published_at": "2026-08-12T12:16:33Z", "permalinks": {"instagram": "https://www.instagram.com/reel/Db8JCRXl06i/"}, "platforms": ["instagram"], "metrics": {"views": 0, "likes": 0, "comments": 0, "shares": 0, "saves": 0}}, {"id": "9f8d1fa5-06b1-4cac-a686-5e79cf750b9b", "title": "学员分享｜Sharon：用 ChatGPT 做招聘网站", "published_at": "2026-08-12T12:14:54Z", "permalinks": {"facebook": "https://www.facebook.com/reel/1088205987073864/", "youtube": "https://www.youtube.com/watch?v=WFn4E2EAnP8"}, "platforms": ["facebook", "youtube"], "metrics": {"views": 0, "likes": 0, "comments": 0, "shares": 0, "saves": 0}}, {"id": "479d5efe-3ab7-4a48-a591-5a71b3f0d329", "title": "学员分享｜Joey：用 ChatGPT 当天完成个人网站", "published_at": "2026-08-11T15:15:19Z", "permalinks": {"facebook": "https://www.facebook.com/reel/1401908945198593/", "instagram": "https://www.instagram.com/reel/Db54tEqE041/", "youtube": "https://www.youtube.com/watch?v=GRuDW3pP4iY"}, "platforms": ["facebook", "instagram", "youtube"], "metrics": {"views": 0, "likes": 0, "comments": 0, "shares": 0, "saves": 0}}, {"id": "86604d4d-583c-46ee-9049-c90cb265d6a6", "title": "学员分享｜Kiyo：用 AI 把想法做成 Website", "published_at": "2026-08-10T14:37:44Z", "permalinks": {"facebook": "https://www.facebook.com/reel/1011741281682415/"}, "platforms": ["facebook"], "metrics": {"views": 0, "likes": 0, "comments": 0, "shares": 0, "saves": 0}}, {"id": "ig-lawrence", "title": "学员分享｜Lawrence：当天完成 Website + WhatsApp", "published_at": "2026-08-09T19:36:37Z", "permalinks": {"instagram": "https://www.instagram.com/reel/Db1NDg1EUd2/"}, "platforms": ["instagram"], "metrics": {"views": 0, "likes": 0, "comments": 0, "shares": 0, "saves": 0}}, {"id": "8c2f5e22-ac90-4b51-8ffc-d51fb974457a", "title": "AI 个人网站实战班圆满落幕", "published_at": "2026-08-08T17:55:24Z", "permalinks": {"instagram": "https://www.instagram.com/p/DbyctRmI3BK/"}, "platforms": ["instagram"], "metrics": {"views": 0, "likes": 0, "comments": 0, "shares": 0, "saves": 0}}, {"id": "ig-minimax", "title": "MiniMax H3：AI 视频生成走向普通人", "published_at": "2026-08-06T09:33:07Z", "permalinks": {"instagram": "https://www.instagram.com/reel/DbsZm4OCvah/"}, "platforms": ["instagram"], "metrics": {"views": 0, "likes": 0, "comments": 0, "shares": 0, "saves": 0}}, {"id": "ig-poster-aug4", "title": "给自己做一个「专属主页」海报", "published_at": "2026-08-04T08:35:34Z", "permalinks": {"instagram": "https://www.instagram.com/p/DbnJet-oKkt/"}, "platforms": ["instagram"], "metrics": {"views": 0, "likes": 1, "comments": 0, "shares": 0, "saves": 0}}], "notes": ["Metrics from SocialAPI live sync + Instagram analytics export (2026-08-12).", "View counts may lag or be unavailable for Facebook via API.", "Instagram export currently reports 0 views on most recent reels."]};
+
+    const ICONS = {
+      instagram: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><linearGradient id="ig" x1="0" y1="24" x2="24" y2="0"><stop stop-color="#f58529"/><stop offset=".5" stop-color="#dd2a7b"/><stop offset="1" stop-color="#515bd4"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="6" stroke="url(#ig)" stroke-width="2"/><circle cx="12" cy="12" r="4.2" stroke="url(#ig)" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3" fill="url(#ig)"/></svg>`,
+      facebook: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#1877F2" d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.03 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.89v2.26h3.32l-.53 3.49h-2.79V24C19.61 23.09 24 18.1 24 12.07z"/></svg>`,
+      youtube: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#FF0000" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8z"/><path fill="#fff" d="M9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>`,
+      threads: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#fff" d="M16.3 7.7a6.5 6.5 0 0 0-2.1-.9 5.6 5.6 0 0 0-.8-1.9A5.4 5.4 0 0 0 8.7 3.2a5.7 5.7 0 0 0-3.8 5.7c0 3.4 1.8 5.8 5.1 6.7a9 9 0 0 1-1.2 1.8 5.1 5.1 0 0 1-3.8 1.7H5a.9.9 0 1 0 0 1.8h.1a6.8 6.8 0 0 0 5.1-2.3 10 10 0 0 0 1.8-3.1c1.2.2 2.3.1 3.3-.3A5.4 5.4 0 0 0 19 9.4c0-1.2-.5-2.2-1.3-2.9a4.4 4.4 0 0 0-1.4-.8zm-1.1 5.5c-.7.3-1.5.4-2.5.2a3.4 3.4 0 0 0 .2-1 3.7 3.7 0 0 0-.4-1.8 2.4 2.4 0 0 1 1.5.5c.9.6 1.1 1.5 1.2 2.1zm-2.9-4.6a5 5 0 0 1 .4 1.9c0 .3 0 .5-.1.8-2.1-.4-3.2-1.8-3.2-3.8A3.9 3.9 0 0 1 8.7 5a3.6 3.6 0 0 1 3.1 1.6c.2.4.4.9.5 1.4zM17.2 9.5c0 .8-.3 1.5-.8 2a3.5 3.5 0 0 1-1.7.9 3.7 3.7 0 0 0-.1-2.5 4 4 0 0 0-1.1-1.7 3.5 3.5 0 0 0-.8-.6.9.9 0 0 1 .2-.3 3.8 3.8 0 0 1 2.8 1c.5.4.8 1.1.8 1.9z"/></svg>`,
+      twitter: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#fff" d="M18.9 2H22l-6.8 7.8L23.3 22h-6.5l-5.1-6.7L5.8 22H2.7l7.3-8.3L.8 2h6.6l4.6 6.1L18.9 2zm-1.1 18h1.8L6.4 3.9H4.5L17.8 20z"/></svg>`,
+      x: null
+    };
+    ICONS.x = ICONS.twitter;
+
+    const LABELS = {
+      instagram: 'Instagram', facebook: 'Facebook', youtube: 'YouTube',
+      threads: 'Threads', twitter: 'X', x: 'X'
     };
 
-    const PLATFORM_LABEL = {
-      instagram: "Instagram",
-      facebook: "Facebook",
-      youtube: "YouTube",
-      threads: "Threads",
-      twitter: "X",
-      x: "X"
-    };
-
-    function escapeHtml(str) {
-      return String(str == null ? "" : str)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#39;");
-    }
-
-    function formatNumber(n) {
-      const v = Number(n);
-      if (!Number.isFinite(v)) return "0";
-      return new Intl.NumberFormat("en-US").format(v);
-    }
-
-    function formatMYT(iso) {
+    function icon(p){ return `<span class="ico">${ICONS[p] || ICONS.twitter}</span>`; }
+    function label(p){ return LABELS[p] || p; }
+    function fmtMYT(iso){
       const d = new Date(iso);
-      if (Number.isNaN(d.getTime())) return { date: "—", time: "" };
-      const date = new Intl.DateTimeFormat("zh-CN", {
-        timeZone: "Asia/Kuala_Lumpur",
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit"
-      }).format(d);
-      const time = new Intl.DateTimeFormat("en-GB", {
-        timeZone: "Asia/Kuala_Lumpur",
-        hour: "2-digit",
-        minute: "2-digit",
-        hour12: false
-      }).format(d);
-      return { date, time: time + " MYT" };
+      const date = new Intl.DateTimeFormat('zh-CN', { timeZone:'Asia/Kuala_Lumpur', year:'numeric', month:'2-digit', day:'2-digit' }).format(d);
+      const time = new Intl.DateTimeFormat('zh-CN', { timeZone:'Asia/Kuala_Lumpur', hour:'2-digit', minute:'2-digit', hour12:false }).format(d);
+      return { date, time };
     }
+    function n(v){ return Number(v||0).toLocaleString('en-US'); }
+    function sum(posts, key){ return posts.reduce((a,p)=>a+(p.metrics?.[key]||0),0); }
 
-    function formatUpdated(iso) {
-      const d = new Date(iso);
-      if (Number.isNaN(d.getTime())) return "—";
-      return new Intl.DateTimeFormat("zh-CN", {
-        timeZone: "Asia/Kuala_Lumpur",
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-        hour: "2-digit",
-        minute: "2-digit",
-        hour12: false
-      }).format(d).replace(/\//g, "-") + " MYT";
-    }
+    function render(data){
+      const posts = data.posts || [];
+      const { date, time } = fmtMYT(data.updated_at || new Date().toISOString());
+      document.getElementById('updated').textContent = `${date} ${time} MYT`;
 
-    function sumMetrics(posts) {
-      return posts.reduce((acc, p) => {
+      const kpis = [
+        ['帖子总数', posts.length, '当前列表'],
+        ['观看', sum(posts,'views'), 'views'],
+        ['点赞', sum(posts,'likes'), 'likes'],
+        ['评论', sum(posts,'comments'), 'comments'],
+        ['分享', sum(posts,'shares'), 'shares'],
+      ];
+      document.getElementById('kpis').innerHTML = kpis.map(([l,v,h]) =>
+        `<div class="kpi"><div class="label">${l}</div><div class="value">${n(v)}</div><div class="hint">${h}</div></div>`
+      ).join('');
+
+      document.getElementById('channels').innerHTML = (data.channels||[]).map(c => {
+        const p = c.platform === 'twitter' ? 'twitter' : c.platform;
+        const handle = c.username?.startsWith('@') ? c.username : `@${c.username||''}`;
+        return `<article class="channel">
+          <div class="channel-top">
+            <span class="plat ${p}">${icon(p)}${label(p)}</span>
+            <span class="status">${c.status||'active'}</span>
+          </div>
+          <h3>${c.name||''}</h3>
+          <div class="handle">${handle}</div>
+          ${c.page ? `<div class="page">Page · ${c.page}</div>` : ''}
+        </article>`;
+      }).join('');
+
+      document.getElementById('posts').innerHTML = posts.map(p => {
+        const t = fmtMYT(p.published_at);
+        const plats = (p.platforms||[]).map(x => `<span class="chip ${x}">${icon(x)}${label(x)}</span>`).join('');
+        const links = Object.entries(p.permalinks||{}).map(([k,u]) =>
+          `<a href="${u}" target="_blank" rel="noopener">${icon(k)}${label(k)}</a>`
+        ).join('');
         const m = p.metrics || {};
-        acc.likes += Number(m.likes) || 0;
-        acc.comments += Number(m.comments) || 0;
-        acc.shares += Number(m.shares) || 0;
-        acc.views += Number(m.views) || 0;
-        return acc;
-      }, { likes: 0, comments: 0, shares: 0, views: 0 });
+        return `<tr>
+          <td class="date-cell">${t.date}<span class="time">${t.time} MYT</span></td>
+          <td class="title-cell"><div class="title">${p.title||''}</div><div class="links">${links}</div></td>
+          <td><div class="chips">${plats}</div></td>
+          <td><span class="pub">已发布</span></td>
+          <td><div class="metrics">
+            <div class="metric"><span class="n">${n(m.views)}</span><span class="l">观看</span></div>
+            <div class="metric"><span class="n">${n(m.likes)}</span><span class="l">点赞</span></div>
+            <div class="metric"><span class="n">${n(m.comments)}</span><span class="l">评论</span></div>
+            <div class="metric"><span class="n">${n(m.shares)}</span><span class="l">分享</span></div>
+          </div></td>
+        </tr>`;
+      }).join('');
+
+      document.getElementById('notes').innerHTML = (data.notes||[]).map(x=>`<li>${x}</li>`).join('');
+      document.getElementById('foot-logos').innerHTML =
+        ['instagram','facebook','youtube','threads','twitter'].map(p=>`<span class="mini">${ICONS[p]}</span>`).join('');
     }
 
-    function handleDisplay(ch) {
-      const u = ch.username || "";
-      if (!u) return "";
-      if (ch.platform === "youtube") return u.startsWith("@") ? u : "@" + u;
-      if (ch.platform === "twitter" || ch.platform === "x") return "@" + u.replace(/^@/, "");
-      if (ch.platform === "threads") return "@" + u.replace(/^@/, "");
-      if (ch.platform === "instagram") return "@" + u.replace(/^@/, "");
-      return u;
-    }
-
-    function render(data, sourceLabel) {
-      const posts = Array.isArray(data.posts) ? data.posts.slice() : [];
-      posts.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
-      const totals = sumMetrics(posts);
-      const channels = Array.isArray(data.channels) ? data.channels : [];
-      const notes = Array.isArray(data.notes) ? data.notes : [];
-
-      const kpiHtml = `
-        <section>
-          <div class="section-head"><h2>核心指标 · KPI</h2></div>
-          <div class="kpi-grid">
-            <article class="kpi">
-              <div class="label">帖子总数</div>
-              <div class="value">${formatNumber(posts.length)}</div>
-              <div class="hint">本期 · period</div>
-            </article>
-            <article class="kpi">
-              <div class="label">点赞</div>
-              <div class="value">${formatNumber(totals.likes)}</div>
-              <div class="hint">Likes</div>
-            </article>
-            <article class="kpi">
-              <div class="label">评论</div>
-              <div class="value">${formatNumber(totals.comments)}</div>
-              <div class="hint">Comments</div>
-            </article>
-            <article class="kpi">
-              <div class="label">分享</div>
-              <div class="value">${formatNumber(totals.shares)}</div>
-              <div class="hint">Shares</div>
-            </article>
-            <article class="kpi">
-              <div class="label">观看</div>
-              <div class="value">${formatNumber(totals.views)}</div>
-              <div class="hint">Views（未知记 0）</div>
-            </article>
-          </div>
-        </section>`;
-
-      const channelHtml = `
-        <section>
-          <div class="section-head"><h2>渠道 · Channels</h2></div>
-          <div class="channel-grid">
-            ${channels.map((ch) => {
-              const plat = (ch.platform || "").toLowerCase();
-              const label = PLATFORM_LABEL[plat] || plat;
-              const status = (ch.status || "active").toLowerCase();
-              const page = ch.page ? `<div class="meta">Page: ${escapeHtml(ch.page)}</div>` : "";
-              return `
-                <article class="channel">
-                  <div class="channel-top">
-                    <span class="plat-badge plat-${escapeHtml(plat)}"><span class="plat-dot"></span>${escapeHtml(label)}</span>
-                    <span class="status-chip">${escapeHtml(status)}</span>
-                  </div>
-                  <h3>${escapeHtml(ch.name || label)}</h3>
-                  <div class="handle">${escapeHtml(handleDisplay(ch))}</div>
-                  <div class="meta">${escapeHtml(ch.account_id || "")}</div>
-                  ${page}
-                </article>`;
-            }).join("")}
-          </div>
-        </section>`;
-
-      const rows = posts.map((p) => {
-        const { date, time } = formatMYT(p.published_at);
-        const m = p.metrics || {};
-        const plats = (p.platforms || []).map((pl) => {
-          const key = String(pl).toLowerCase();
-          return `<span class="chip ${escapeHtml(key)}">${escapeHtml(PLATFORM_LABEL[key] || pl)}</span>`;
-        }).join("");
-        const links = Object.entries(p.permalinks || {}).map(([pl, url]) => {
-          const key = String(pl).toLowerCase();
-          return `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(PLATFORM_LABEL[key] || pl)}</a>`;
-        }).join("");
-        return `
-          <tr>
-            <td class="date-cell">${escapeHtml(date)}<span class="time">${escapeHtml(time)}</span></td>
-            <td class="title-cell">
-              <div class="title">${escapeHtml(p.title || "Untitled")}</div>
-              <div class="links">${links || '<span class="chip">无链接</span>'}</div>
-            </td>
-            <td><div class="chips">${plats}</div></td>
-            <td><span class="pub-status">已发布</span></td>
-            <td>
-              <div class="metrics-row">
-                <div class="metric-pill"><span class="n">${formatNumber(m.likes)}</span><span class="l">点赞</span></div>
-                <div class="metric-pill"><span class="n">${formatNumber(m.comments)}</span><span class="l">评论</span></div>
-                <div class="metric-pill"><span class="n">${formatNumber(m.shares)}</span><span class="l">分享</span></div>
-                <div class="metric-pill"><span class="n">${formatNumber(m.views)}</span><span class="l">观看</span></div>
-              </div>
-            </td>
-          </tr>`;
-      }).join("");
-
-      const postsHtml = `
-        <section>
-          <div class="section-head"><h2>最近帖子 · Recent Posts</h2></div>
-          <div class="table-card">
-            <div class="table-scroll">
-              <table class="posts">
-                <thead>
-                  <tr>
-                    <th>日期 (MYT)</th>
-                    <th>标题 / 链接</th>
-                    <th>平台</th>
-                    <th>状态</th>
-                    <th>互动</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  ${rows || '<tr><td colspan="5">暂无帖子</td></tr>'}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>`;
-
-      const notesHtml = `
-        <section>
-          <div class="notes">
-            <h2>注意事项 · Notes</h2>
-            <ul>
-              ${notes.map((n) => `<li>${escapeHtml(n)}</li>`).join("")}
-              <li>Facebook 观看数据经 API 常常不可用；Instagram 新 Reel 导出可能暂时显示 0 观看，数据可能滞后。</li>
-            </ul>
-          </div>
-        </section>`;
-
-      const app = document.getElementById("app");
-      app.innerHTML = `
-        <header class="top">
-          <div class="brand-block">
-            <div class="logo" aria-hidden="true">IC</div>
-            <div>
-              <h1>${escapeHtml(data.brand || "InstallMyClaw")} Social Tracker</h1>
-              <p>社交发布指标看板 · SocialAPI brand sync</p>
-            </div>
-          </div>
-          <div class="meta-pill" title="更新时间">
-            <span class="dot" aria-hidden="true"></span>
-            <span>更新时间 · <strong>${escapeHtml(formatUpdated(data.updated_at))}</strong></span>
-          </div>
-        </header>
-        ${kpiHtml}
-        ${channelHtml}
-        ${postsHtml}
-        ${notesHtml}
-        <footer class="foot">
-          <span>Brand ID: d58944aa-03d3-4481-8712-7a0df62539a9</span>
-          <span>Data source: ${escapeHtml(sourceLabel)} · TZ Asia/Kuala_Lumpur</span>
-        </footer>`;
-    }
-
-    async function boot() {
+    async function boot(){
       try {
-        const res = await fetch("./data.json", { cache: "no-store" });
-        if (!res.ok) throw new Error("HTTP " + res.status);
-        const data = await res.json();
-        render(data, "data.json");
-      } catch (err) {
-        render(FALLBACK_DATA, "inline fallback");
+        const res = await fetch('data.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error('bad');
+        render(await res.json());
+      } catch (e) {
+        render(FALLBACK_DATA);
       }
     }
-
     boot();
   </script>
 </body>
