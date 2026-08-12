@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InstallMyClaw Social Tracker</title>
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --bg-elevated: #121826;
+      --bg-card: #161d2b;
+      --bg-card-hover: #1c2538;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-strong: rgba(255, 255, 255, 0.14);
+      --text: #eef2ff;
+      --text-muted: #93a0b8;
+      --text-dim: #6b778f;
+      --accent: #7c9cff;
+      --accent-soft: rgba(124, 156, 255, 0.14);
+      --success: #3dd68c;
+      --success-soft: rgba(61, 214, 140, 0.14);
+      --warn: #f5c14a;
+      --warn-soft: rgba(245, 193, 74, 0.14);
+      --danger: #ff7a8a;
+      --ig: #f56040;
+      --fb: #1877f2;
+      --yt: #ff0033;
+      --th: #f8fafc;
+      --x: #e7e9ea;
+      --radius: 16px;
+      --radius-sm: 10px;
+      --shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: var(--font);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(124, 156, 255, 0.18), transparent 55%),
+        radial-gradient(900px 500px at 90% 0%, rgba(61, 214, 140, 0.08), transparent 50%),
+        var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 56px;
+    }
+
+    header.top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px 24px;
+      margin-bottom: 28px;
+    }
+
+    .brand-block { display: flex; gap: 14px; align-items: center; }
+    .logo {
+      width: 48px; height: 48px; border-radius: 14px;
+      background: linear-gradient(145deg, #8ea8ff, #4f6fff 55%, #2dd4a8);
+      display: grid; place-items: center;
+      font-weight: 800; letter-spacing: -0.03em;
+      color: #081018; box-shadow: var(--shadow);
+      flex-shrink: 0;
+    }
+    .brand-block h1 {
+      margin: 0;
+      font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+      font-weight: 750;
+      letter-spacing: -0.02em;
+    }
+    .brand-block p {
+      margin: 4px 0 0;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .meta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    .meta-pill strong { color: var(--text); font-weight: 600; }
+    .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--success);
+      box-shadow: 0 0 0 4px var(--success-soft);
+    }
+
+    section { margin-bottom: 28px; }
+    .section-head {
+      display: flex; align-items: baseline; justify-content: space-between;
+      gap: 12px; margin-bottom: 12px;
+    }
+    .section-head h2 {
+      margin: 0;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .kpi {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), transparent), var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 16px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      min-height: 110px;
+    }
+    .kpi::after {
+      content: "";
+      position: absolute; inset: auto -20% -40% auto;
+      width: 120px; height: 120px; border-radius: 50%;
+      background: var(--accent-soft);
+      filter: blur(8px);
+      pointer-events: none;
+    }
+    .kpi .label {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .kpi .value {
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      font-weight: 750;
+      letter-spacing: -0.03em;
+      font-variant-numeric: tabular-nums;
+    }
+    .kpi .hint {
+      margin-top: 6px;
+      color: var(--text-dim);
+      font-size: 0.75rem;
+    }
+
+    .channel-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .channel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+    }
+    .channel:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-strong);
+      transform: translateY(-1px);
+    }
+    .channel-top {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 8px; margin-bottom: 12px;
+    }
+    .plat-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 0.78rem; font-weight: 700;
+      padding: 5px 9px; border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      text-transform: capitalize;
+    }
+    .plat-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+    }
+    .plat-instagram .plat-dot { background: var(--ig); }
+    .plat-facebook .plat-dot { background: var(--fb); }
+    .plat-youtube .plat-dot { background: var(--yt); }
+    .plat-threads .plat-dot { background: var(--th); }
+    .plat-twitter .plat-dot, .plat-x .plat-dot { background: var(--x); }
+
+    .status-chip {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--success);
+      background: var(--success-soft);
+      border: 1px solid rgba(61, 214, 140, 0.25);
+      padding: 4px 8px;
+      border-radius: 999px;
+    }
+    .channel h3 {
+      margin: 0 0 4px;
+      font-size: 0.98rem;
+      font-weight: 700;
+    }
+    .channel .handle {
+      color: var(--text-muted);
+      font-size: 0.84rem;
+      margin-bottom: 10px;
+    }
+    .channel .meta {
+      color: var(--text-dim);
+      font-size: 0.72rem;
+      font-family: var(--mono);
+      word-break: break-all;
+      line-height: 1.4;
+    }
+
+    .table-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+    table.posts {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 860px;
+    }
+    table.posts th,
+    table.posts td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    table.posts th {
+      font-size: 0.72rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      background: rgba(255,255,255,0.02);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    table.posts tbody tr:last-child td { border-bottom: none; }
+    table.posts tbody tr:hover td { background: rgba(255,255,255,0.02); }
+
+    .date-cell {
+      white-space: nowrap;
+      color: var(--text-muted);
+      font-size: 0.86rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .date-cell .time {
+      display: block;
+      color: var(--text-dim);
+      font-size: 0.75rem;
+      margin-top: 2px;
+    }
+
+    .title-cell { max-width: 340px; }
+    .title-cell .title {
+      font-weight: 650;
+      font-size: 0.94rem;
+      margin-bottom: 6px;
+    }
+    .links { display: flex; flex-wrap: wrap; gap: 6px; }
+    .links a {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+    .links a:hover { color: var(--text); border-color: var(--border-strong); text-decoration: none; }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      text-transform: capitalize;
+      color: var(--text-muted);
+    }
+    .chip.instagram { color: #ffb39a; border-color: rgba(245,96,64,0.35); background: rgba(245,96,64,0.1); }
+    .chip.facebook { color: #8ab4ff; border-color: rgba(24,119,242,0.35); background: rgba(24,119,242,0.12); }
+    .chip.youtube { color: #ff8a9b; border-color: rgba(255,0,51,0.35); background: rgba(255,0,51,0.12); }
+    .chip.threads { color: #f1f5f9; border-color: rgba(248,250,252,0.25); }
+    .chip.twitter, .chip.x { color: #e7e9ea; border-color: rgba(231,233,234,0.25); }
+
+    .pub-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      font-weight: 650;
+      color: var(--success);
+      background: var(--success-soft);
+      border: 1px solid rgba(61, 214, 140, 0.22);
+      padding: 4px 9px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .pub-status::before {
+      content: "";
+      width: 6px; height: 6px; border-radius: 50%;
+      background: currentColor;
+    }
+
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(52px, 1fr));
+      gap: 8px;
+      min-width: 240px;
+    }
+    .metric-pill {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 6px 8px;
+      text-align: center;
+    }
+    .metric-pill .n {
+      display: block;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      font-size: 0.9rem;
+    }
+    .metric-pill .l {
+      display: block;
+      color: var(--text-dim);
+      font-size: 0.68rem;
+      margin-top: 2px;
+    }
+
+    .notes {
+      background: linear-gradient(135deg, var(--warn-soft), transparent 60%), var(--bg-card);
+      border: 1px solid rgba(245, 193, 74, 0.28);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+    }
+    .notes h2 {
+      margin: 0 0 10px;
+      font-size: 0.95rem;
+      color: var(--warn);
+      letter-spacing: 0;
+      text-transform: none;
+      font-weight: 750;
+    }
+    .notes ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .notes li { margin: 6px 0; }
+
+    footer.foot {
+      margin-top: 8px;
+      color: var(--text-dim);
+      font-size: 0.78rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      justify-content: space-between;
+    }
+
+    .loading, .error {
+      padding: 28px;
+      text-align: center;
+      color: var(--text-muted);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      background: var(--bg-elevated);
+    }
+    .error { color: var(--danger); border-color: rgba(255,122,138,0.35); }
+
+    @media (max-width: 980px) {
+      .kpi-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .channel-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    @media (max-width: 720px) {
+      .wrap { width: min(100% - 24px, 1180px); padding-top: 20px; }
+      .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .channel-grid { grid-template-columns: 1fr 1fr; }
+      .kpi:last-child { grid-column: 1 / -1; }
+    }
+    @media (max-width: 480px) {
+      .channel-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" id="app">
+    <div class="loading">加载中…</div>
+  </div>
+
+  <script>
+    const FALLBACK_DATA = {
+      "brand": "InstallMyClaw",
+      "updated_at": "2026-08-12T14:33:00Z",
+      "channels": [
+        {"platform":"instagram","name":"InstallMyClaw","username":"installmyclaw","status":"active","account_id":"acc_01KZB4GM5B4QV872A6T4AGQ6GQ"},
+        {"platform":"facebook","name":"Installmyclaw","username":"Installmyclaw","status":"active","account_id":"acc_01KX307TMNV5QXHY20YP0H94GY","page":"Installmyclaw"},
+        {"platform":"youtube","name":"InstallMyClaw","username":"@installmyclaw","status":"active","account_id":"acc_01KY9VG90637YSKHFSX05YJH92"},
+        {"platform":"threads","name":"Tan Jun Wei","username":"justintan.my","status":"active","account_id":"acc_01KY9VMZ03PHTDVQT1TR5E1VX3"},
+        {"platform":"twitter","name":"justintan","username":"junwei1213","status":"active","account_id":"acc_01KX5K2272MX97Q29XS64K9SK0"}
+      ],
+      "posts": [
+        {
+          "id":"bcd148dd-43fe-485b-bb7d-ace5897e9db0",
+          "title":"学员分享｜Kiyo：用 AI 把想法做成 Website",
+          "published_at":"2026-08-12T12:36:13Z",
+          "permalinks":{"instagram":"https://www.instagram.com/reel/Db8LUTCguwb/"},
+          "platforms":["instagram"],
+          "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
+        },
+        {
+          "id":"eac37acb-e167-4858-bc47-9bbe923d1b34",
+          "title":"学员分享｜Sharon：用 ChatGPT 做招聘网站",
+          "published_at":"2026-08-12T12:16:33Z",
+          "permalinks":{"instagram":"https://www.instagram.com/reel/Db8JCRXl06i/"},
+          "platforms":["instagram"],
+          "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
+        },
+        {
+          "id":"9f8d1fa5-06b1-4cac-a686-5e79cf750b9b",
+          "title":"学员分享｜Sharon：用 ChatGPT 做招聘网站",
+          "published_at":"2026-08-12T12:14:54Z",
+          "permalinks":{"facebook":"https://www.facebook.com/reel/1088205987073864/","youtube":"https://www.youtube.com/watch?v=WFn4E2EAnP8"},
+          "platforms":["facebook","youtube"],
+          "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
+        },
+        {
+          "id":"479d5efe-3ab7-4a48-a591-5a71b3f0d329",
+          "title":"学员分享｜Joey：用 ChatGPT 当天完成个人网站",
+          "published_at":"2026-08-11T15:15:19Z",
+          "permalinks":{"facebook":"https://www.facebook.com/reel/1401908945198593/","instagram":"https://www.instagram.com/reel/Db54tEqE041/","youtube":"https://www.youtube.com/watch?v=GRuDW3pP4iY"},
+          "platforms":["facebook","instagram","youtube"],
+          "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
+        },
+        {
+          "id":"86604d4d-583c-46ee-9049-c90cb265d6a6",
+          "title":"学员分享｜Kiyo：用 AI 把想法做成 Website",
+          "published_at":"2026-08-10T14:37:44Z",
+          "permalinks":{"facebook":"https://www.facebook.com/reel/1011741281682415/"},
+          "platforms":["facebook"],
+          "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
+        },
+        {
+          "id":"ig-lawrence",
+          "title":"学员分享｜Lawrence：当天完成 Website + WhatsApp",
+          "published_at":"2026-08-09T19:36:37Z",
+          "permalinks":{"instagram":"https://www.instagram.com/reel/Db1NDg1EUd2/"},
+          "platforms":["instagram"],
+          "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
+        },
+        {
+          "id":"8c2f5e22-ac90-4b51-8ffc-d51fb974457a",
+          "title":"AI 个人网站实战班圆满落幕",
+          "published_at":"2026-08-08T17:55:24Z",
+          "permalinks":{"instagram":"https://www.instagram.com/p/DbyctRmI3BK/"},
+          "platforms":["instagram"],
+          "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
+        },
+        {
+          "id":"ig-minimax",
+          "title":"MiniMax H3：AI 视频生成走向普通人",
+          "published_at":"2026-08-06T09:33:07Z",
+          "permalinks":{"instagram":"https://www.instagram.com/reel/DbsZm4OCvah/"},
+          "platforms":["instagram"],
+          "metrics":{"views":0,"likes":0,"comments":0,"shares":0,"saves":0}
+        },
+        {
+          "id":"ig-poster-aug4",
+          "title":"给自己做一个「专属主页」海报",
+          "published_at":"2026-08-04T08:35:34Z",
+          "permalinks":{"instagram":"https://www.instagram.com/p/DbnJet-oKkt/"},
+          "platforms":["instagram"],
+          "metrics":{"views":0,"likes":1,"comments":0,"shares":0,"saves":0}
+        }
+      ],
+      "notes": [
+        "Metrics from SocialAPI live sync + Instagram analytics export (2026-08-12).",
+        "View counts may lag or be unavailable for Facebook via API.",
+        "Instagram export currently reports 0 views on most recent reels."
+      ]
+    };
+
+    const PLATFORM_LABEL = {
+      instagram: "Instagram",
+      facebook: "Facebook",
+      youtube: "YouTube",
+      threads: "Threads",
+      twitter: "X",
+      x: "X"
+    };
+
+    function escapeHtml(str) {
+      return String(str == null ? "" : str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function formatNumber(n) {
+      const v = Number(n);
+      if (!Number.isFinite(v)) return "0";
+      return new Intl.NumberFormat("en-US").format(v);
+    }
+
+    function formatMYT(iso) {
+      const d = new Date(iso);
+      if (Number.isNaN(d.getTime())) return { date: "—", time: "" };
+      const date = new Intl.DateTimeFormat("zh-CN", {
+        timeZone: "Asia/Kuala_Lumpur",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+      }).format(d);
+      const time = new Intl.DateTimeFormat("en-GB", {
+        timeZone: "Asia/Kuala_Lumpur",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false
+      }).format(d);
+      return { date, time: time + " MYT" };
+    }
+
+    function formatUpdated(iso) {
+      const d = new Date(iso);
+      if (Number.isNaN(d.getTime())) return "—";
+      return new Intl.DateTimeFormat("zh-CN", {
+        timeZone: "Asia/Kuala_Lumpur",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false
+      }).format(d).replace(/\//g, "-") + " MYT";
+    }
+
+    function sumMetrics(posts) {
+      return posts.reduce((acc, p) => {
+        const m = p.metrics || {};
+        acc.likes += Number(m.likes) || 0;
+        acc.comments += Number(m.comments) || 0;
+        acc.shares += Number(m.shares) || 0;
+        acc.views += Number(m.views) || 0;
+        return acc;
+      }, { likes: 0, comments: 0, shares: 0, views: 0 });
+    }
+
+    function handleDisplay(ch) {
+      const u = ch.username || "";
+      if (!u) return "";
+      if (ch.platform === "youtube") return u.startsWith("@") ? u : "@" + u;
+      if (ch.platform === "twitter" || ch.platform === "x") return "@" + u.replace(/^@/, "");
+      if (ch.platform === "threads") return "@" + u.replace(/^@/, "");
+      if (ch.platform === "instagram") return "@" + u.replace(/^@/, "");
+      return u;
+    }
+
+    function render(data, sourceLabel) {
+      const posts = Array.isArray(data.posts) ? data.posts.slice() : [];
+      posts.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
+      const totals = sumMetrics(posts);
+      const channels = Array.isArray(data.channels) ? data.channels : [];
+      const notes = Array.isArray(data.notes) ? data.notes : [];
+
+      const kpiHtml = `
+        <section>
+          <div class="section-head"><h2>核心指标 · KPI</h2></div>
+          <div class="kpi-grid">
+            <article class="kpi">
+              <div class="label">帖子总数</div>
+              <div class="value">${formatNumber(posts.length)}</div>
+              <div class="hint">本期 · period</div>
+            </article>
+            <article class="kpi">
+              <div class="label">点赞</div>
+              <div class="value">${formatNumber(totals.likes)}</div>
+              <div class="hint">Likes</div>
+            </article>
+            <article class="kpi">
+              <div class="label">评论</div>
+              <div class="value">${formatNumber(totals.comments)}</div>
+              <div class="hint">Comments</div>
+            </article>
+            <article class="kpi">
+              <div class="label">分享</div>
+              <div class="value">${formatNumber(totals.shares)}</div>
+              <div class="hint">Shares</div>
+            </article>
+            <article class="kpi">
+              <div class="label">观看</div>
+              <div class="value">${formatNumber(totals.views)}</div>
+              <div class="hint">Views（未知记 0）</div>
+            </article>
+          </div>
+        </section>`;
+
+      const channelHtml = `
+        <section>
+          <div class="section-head"><h2>渠道 · Channels</h2></div>
+          <div class="channel-grid">
+            ${channels.map((ch) => {
+              const plat = (ch.platform || "").toLowerCase();
+              const label = PLATFORM_LABEL[plat] || plat;
+              const status = (ch.status || "active").toLowerCase();
+              const page = ch.page ? `<div class="meta">Page: ${escapeHtml(ch.page)}</div>` : "";
+              return `
+                <article class="channel">
+                  <div class="channel-top">
+                    <span class="plat-badge plat-${escapeHtml(plat)}"><span class="plat-dot"></span>${escapeHtml(label)}</span>
+                    <span class="status-chip">${escapeHtml(status)}</span>
+                  </div>
+                  <h3>${escapeHtml(ch.name || label)}</h3>
+                  <div class="handle">${escapeHtml(handleDisplay(ch))}</div>
+                  <div class="meta">${escapeHtml(ch.account_id || "")}</div>
+                  ${page}
+                </article>`;
+            }).join("")}
+          </div>
+        </section>`;
+
+      const rows = posts.map((p) => {
+        const { date, time } = formatMYT(p.published_at);
+        const m = p.metrics || {};
+        const plats = (p.platforms || []).map((pl) => {
+          const key = String(pl).toLowerCase();
+          return `<span class="chip ${escapeHtml(key)}">${escapeHtml(PLATFORM_LABEL[key] || pl)}</span>`;
+        }).join("");
+        const links = Object.entries(p.permalinks || {}).map(([pl, url]) => {
+          const key = String(pl).toLowerCase();
+          return `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(PLATFORM_LABEL[key] || pl)}</a>`;
+        }).join("");
+        return `
+          <tr>
+            <td class="date-cell">${escapeHtml(date)}<span class="time">${escapeHtml(time)}</span></td>
+            <td class="title-cell">
+              <div class="title">${escapeHtml(p.title || "Untitled")}</div>
+              <div class="links">${links || '<span class="chip">无链接</span>'}</div>
+            </td>
+            <td><div class="chips">${plats}</div></td>
+            <td><span class="pub-status">已发布</span></td>
+            <td>
+              <div class="metrics-row">
+                <div class="metric-pill"><span class="n">${formatNumber(m.likes)}</span><span class="l">点赞</span></div>
+                <div class="metric-pill"><span class="n">${formatNumber(m.comments)}</span><span class="l">评论</span></div>
+                <div class="metric-pill"><span class="n">${formatNumber(m.shares)}</span><span class="l">分享</span></div>
+                <div class="metric-pill"><span class="n">${formatNumber(m.views)}</span><span class="l">观看</span></div>
+              </div>
+            </td>
+          </tr>`;
+      }).join("");
+
+      const postsHtml = `
+        <section>
+          <div class="section-head"><h2>最近帖子 · Recent Posts</h2></div>
+          <div class="table-card">
+            <div class="table-scroll">
+              <table class="posts">
+                <thead>
+                  <tr>
+                    <th>日期 (MYT)</th>
+                    <th>标题 / 链接</th>
+                    <th>平台</th>
+                    <th>状态</th>
+                    <th>互动</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${rows || '<tr><td colspan="5">暂无帖子</td></tr>'}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>`;
+
+      const notesHtml = `
+        <section>
+          <div class="notes">
+            <h2>注意事项 · Notes</h2>
+            <ul>
+              ${notes.map((n) => `<li>${escapeHtml(n)}</li>`).join("")}
+              <li>Facebook 观看数据经 API 常常不可用；Instagram 新 Reel 导出可能暂时显示 0 观看，数据可能滞后。</li>
+            </ul>
+          </div>
+        </section>`;
+
+      const app = document.getElementById("app");
+      app.innerHTML = `
+        <header class="top">
+          <div class="brand-block">
+            <div class="logo" aria-hidden="true">IC</div>
+            <div>
+              <h1>${escapeHtml(data.brand || "InstallMyClaw")} Social Tracker</h1>
+              <p>社交发布指标看板 · SocialAPI brand sync</p>
+            </div>
+          </div>
+          <div class="meta-pill" title="更新时间">
+            <span class="dot" aria-hidden="true"></span>
+            <span>更新时间 · <strong>${escapeHtml(formatUpdated(data.updated_at))}</strong></span>
+          </div>
+        </header>
+        ${kpiHtml}
+        ${channelHtml}
+        ${postsHtml}
+        ${notesHtml}
+        <footer class="foot">
+          <span>Brand ID: d58944aa-03d3-4481-8712-7a0df62539a9</span>
+          <span>Data source: ${escapeHtml(sourceLabel)} · TZ Asia/Kuala_Lumpur</span>
+        </footer>`;
+    }
+
+    async function boot() {
+      try {
+        const res = await fetch("./data.json", { cache: "no-store" });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const data = await res.json();
+        render(data, "data.json");
+      } catch (err) {
+        render(FALLBACK_DATA, "inline fallback");
+      }
+    }
+
+    boot();
+  </script>
+</body>
+</html>
