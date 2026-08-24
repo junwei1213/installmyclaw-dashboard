@@ -1,6 +1,6 @@
 {
   "brand": "InstallMyClaw",
-  "updated_at": "2026-08-21T01:10:31Z",
+  "updated_at": "2026-08-24T01:12:39Z",
   "capabilities": {
     "publish": "via_agent",
     "inbox": "via_agent",
@@ -11,7 +11,7 @@
       "platform": "instagram",
       "name": "InstallMyClaw",
       "username": "installmyclaw",
-      "status": "active",
+      "status": "token_expired",
       "account_id": "acc_01KZB4GM5B4QV872A6T4AGQ6GQ"
     },
     {
@@ -290,6 +290,7 @@
   "notes": [
     "发布/排程/回复：在 IMC Social Publisher 对话里操作（发视频/文案给我即可）。",
     "看板是运营总览；观看数因 SocialAPI 单帖 metrics 不返回 views 而未展示。",
-    "仅 InstallMyClaw 品牌与 Installmyclaw Facebook Page。"
+    "仅 InstallMyClaw 品牌与 Installmyclaw Facebook Page。",
+    "Instagram token 已过期，需在 SocialAPI 重连 @installmyclaw。"
   ]
 }
