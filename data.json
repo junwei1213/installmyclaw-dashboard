@@ -1,6 +1,6 @@
 {
   "brand": "InstallMyClaw",
-  "updated_at": "2026-09-01T01:24:17Z",
+  "updated_at": "2026-09-03T01:29:21Z",
   "capabilities": {
     "publish": "via_agent",
     "inbox": "via_agent",
@@ -221,7 +221,7 @@
       }
     },
     {
-      "id": "ig-poster-aug4",
+      "id": "3e24ccaa-d554-43f0-975b-a15dbd30f0ea",
       "title": "给自己做一个「专属主页」海报",
       "status": "published",
       "published_at": "2026-08-04T08:35:34Z",
