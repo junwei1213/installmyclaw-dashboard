@@ -1,6 +1,6 @@
 {
   "brand": "InstallMyClaw",
-  "updated_at": "2026-09-04T01:20:10Z",
+  "updated_at": "2026-09-07T01:13:47Z",
   "capabilities": {
     "publish": "via_agent",
     "inbox": "via_agent",
@@ -11,7 +11,7 @@
       "platform": "instagram",
       "name": "InstallMyClaw",
       "username": "installmyclaw",
-      "status": "token_expired",
+      "status": "active",
       "account_id": "acc_01KZB4GM5B4QV872A6T4AGQ6GQ"
     },
     {
@@ -46,7 +46,7 @@
     }
   ],
   "kpis": {
-    "posts_published": 11,
+    "posts_published": 12,
     "posts_scheduled": 0,
     "posts_failed": 0,
     "likes": 2,
@@ -58,6 +58,25 @@
     "dm_conversations": 0
   },
   "posts": [
+    {
+      "id": "c9b0c935-3083-4185-b3d4-d2e99c8cfc87",
+      "title": "InstallMyClaw 内容发布功能测试帖",
+      "status": "published",
+      "published_at": "2026-09-05T17:43:28Z",
+      "scheduled_at": null,
+      "platforms": [
+        "facebook"
+      ],
+      "permalinks": {
+        "facebook": "https://www.facebook.com/122099213643429346/posts/122113671987429346"
+      },
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    },
     {
       "id": "bcd148dd-43fe-485b-bb7d-ace5897e9db0",
       "title": "学员分享｜Kiyo：用 AI 把想法做成 Website",
@@ -290,7 +309,6 @@
   "notes": [
     "发布/排程/回复：在 IMC Social Publisher 对话里操作（发视频/文案给我即可）。",
     "看板是运营总览；观看数因 SocialAPI 单帖 metrics 不返回 views 而未展示。",
-    "仅 InstallMyClaw 品牌与 Installmyclaw Facebook Page。",
-    "Instagram token 已过期，需在 SocialAPI 重连 @installmyclaw。"
+    "仅 InstallMyClaw 品牌与 Installmyclaw Facebook Page。"
   ]
 }
