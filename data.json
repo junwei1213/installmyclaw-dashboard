@@ -1,6 +1,6 @@
 {
   "brand": "InstallMyClaw",
-  "updated_at": "2026-09-07T01:13:47Z",
+  "updated_at": "2026-09-08T01:27:02Z",
   "capabilities": {
     "publish": "via_agent",
     "inbox": "via_agent",
@@ -49,7 +49,7 @@
     "posts_published": 12,
     "posts_scheduled": 0,
     "posts_failed": 0,
-    "likes": 2,
+    "likes": 3,
     "comments": 0,
     "shares": 3,
     "saves": 0,
@@ -228,12 +228,12 @@
         "youtube"
       ],
       "permalinks": {
-        "facebook": "https://www.facebook.com/reel/1763384021358883/",
+        "youtube": "https://www.youtube.com/watch?v=NYDSJyPhqMA",
         "instagram": "https://www.instagram.com/reel/DbsZm4OCvah/",
-        "youtube": "https://www.youtube.com/watch?v=NYDSJyPhqMA"
+        "facebook": "https://www.facebook.com/reel/1763384021358883/"
       },
       "metrics": {
-        "likes": 0,
+        "likes": 1,
         "comments": 0,
         "shares": 0,
         "saves": 0
