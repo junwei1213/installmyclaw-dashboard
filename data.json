@@ -1,6 +1,6 @@
 {
   "brand": "InstallMyClaw",
-  "updated_at": "2026-09-10T01:13:32Z",
+  "updated_at": "2026-09-11T01:15:35Z",
   "capabilities": {
     "publish": "via_agent",
     "inbox": "via_agent",
@@ -46,18 +46,75 @@
     }
   ],
   "kpis": {
-    "posts_published": 12,
+    "posts_published": 15,
     "posts_scheduled": 0,
-    "posts_failed": 0,
-    "likes": 3,
+    "posts_failed": 1,
+    "likes": 4,
     "comments": 0,
-    "shares": 3,
+    "shares": 4,
     "saves": 0,
     "inbox_comments": 0,
     "dm_unread": 0,
     "dm_conversations": 0
   },
   "posts": [
+    {
+      "id": "54cc3b41-762e-44c9-bf77-753d6fd30903",
+      "title": "WhatsApp AI 客服示范｜冷气服务",
+      "status": "published",
+      "published_at": "2026-09-10T09:08:25Z",
+      "scheduled_at": null,
+      "platforms": [
+        "youtube"
+      ],
+      "permalinks": {
+        "youtube": "https://www.youtube.com/watch?v=ngv_a2DB_20"
+      },
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    },
+    {
+      "id": "568b4159-57e7-4d39-b51a-22bbf25bde4c",
+      "title": "WhatsApp AI 客服示范｜冷气服务",
+      "status": "published",
+      "published_at": "2026-09-10T09:00:30Z",
+      "scheduled_at": null,
+      "platforms": [
+        "instagram"
+      ],
+      "permalinks": {
+        "instagram": "https://www.instagram.com/reel/DdGdr36Ekj0/"
+      },
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    },
+    {
+      "id": "2e57201c-e188-4016-8525-2b13bed4cd54",
+      "title": "WhatsApp AI 客服示范｜冷气服务",
+      "status": "published",
+      "published_at": "2026-09-10T08:59:19Z",
+      "scheduled_at": null,
+      "platforms": [
+        "facebook"
+      ],
+      "permalinks": {
+        "facebook": "https://www.facebook.com/reel/1784351249679444/"
+      },
+      "metrics": {
+        "likes": 1,
+        "comments": 0,
+        "shares": 1,
+        "saves": 0
+      }
+    },
     {
       "id": "c9b0c935-3083-4185-b3d4-d2e99c8cfc87",
       "title": "InstallMyClaw 内容发布功能测试帖",
@@ -300,7 +357,27 @@
   "queue": {
     "scheduled": [],
     "draft": [],
-    "failed": []
+    "failed": [
+      {
+        "id": "0c4a5536-b9a7-4c6e-a29a-a1c24ee40db0",
+        "title": "顾客在问，你刚好在忙？WhatsApp AI 客服示范｜马来西亚 InstallMyClaw",
+        "status": "failed",
+        "published_at": null,
+        "scheduled_at": null,
+        "platforms": [
+          "youtube"
+        ],
+        "permalinks": {},
+        "metrics": {
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 0
+        },
+        "error": "validation.video_url: Video URL is not accessible (HEAD returned 403)",
+        "created_at": "2026-09-10T08:59:04Z"
+      }
+    ]
   },
   "inbox": {
     "comment_posts": [],
