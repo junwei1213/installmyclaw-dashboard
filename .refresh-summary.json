@@ -1,0 +1,61 @@
+{
+  "updated_at": [
+    "2026-09-18T01:28:29Z",
+    "2026-09-21T01:27:03Z"
+  ],
+  "kpis_same": true,
+  "kpi_prev": {
+    "posts_published": 15,
+    "posts_scheduled": 0,
+    "posts_failed": 1,
+    "likes": 4,
+    "comments": 0,
+    "shares": 4,
+    "saves": 0,
+    "inbox_comments": 0,
+    "dm_unread": 0,
+    "dm_conversations": 0
+  },
+  "kpi_new": {
+    "posts_published": 15,
+    "posts_scheduled": 0,
+    "posts_failed": 1,
+    "likes": 4,
+    "comments": 0,
+    "shares": 4,
+    "saves": 0,
+    "inbox_comments": 0,
+    "dm_unread": 0,
+    "dm_conversations": 0
+  },
+  "channels_all_active": true,
+  "new_posts": [],
+  "dm_unread": 0,
+  "inbox_comments": 0,
+  "failed": 1,
+  "failed_detail": "YouTube 0c4a5536 validation.video_url HEAD 403 (republished as 54cc3b41)",
+  "latest": [
+    {
+      "id": "54cc3b41",
+      "platforms": [
+        "youtube"
+      ],
+      "published_at": "2026-09-10T09:08:25Z"
+    },
+    {
+      "id": "568b4159",
+      "platforms": [
+        "instagram"
+      ],
+      "published_at": "2026-09-10T09:00:30Z"
+    },
+    {
+      "id": "2e57201c",
+      "platforms": [
+        "facebook"
+      ],
+      "published_at": "2026-09-10T08:59:19Z"
+    }
+  ],
+  "quiet": true
+}
