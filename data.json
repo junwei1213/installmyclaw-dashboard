@@ -1,6 +1,6 @@
 {
   "brand": "InstallMyClaw",
-  "updated_at": "2026-09-21T01:27:03Z",
+  "updated_at": "2026-09-22T01:32:28Z",
   "capabilities": {
     "publish": "via_agent",
     "inbox": "via_agent",
@@ -144,7 +144,7 @@
         "instagram"
       ],
       "permalinks": {
-        "instagram": "https://www.instagram.com/reel/Db8LUTCguwb"
+        "instagram": "https://www.instagram.com/reel/Db8LUTCguwb/"
       },
       "metrics": {
         "likes": 0,
@@ -163,7 +163,7 @@
         "instagram"
       ],
       "permalinks": {
-        "instagram": "https://www.instagram.com/reel/Db8JCRXl06i"
+        "instagram": "https://www.instagram.com/reel/Db8JCRXl06i/"
       },
       "metrics": {
         "likes": 0,
@@ -183,7 +183,7 @@
         "youtube"
       ],
       "permalinks": {
-        "facebook": "https://www.facebook.com/reel/1088205987073864/",
+        "facebook": "/reel/1088205987073864/",
         "youtube": "https://www.youtube.com/watch?v=WFn4E2EAnP8"
       },
       "metrics": {
@@ -205,7 +205,7 @@
         "youtube"
       ],
       "permalinks": {
-        "facebook": "https://www.facebook.com/reel/1401908945198593/",
+        "facebook": "/reel/1401908945198593/",
         "instagram": "https://www.instagram.com/reel/Db54tEqE041/",
         "youtube": "https://www.youtube.com/watch?v=GRuDW3pP4iY"
       },
@@ -226,7 +226,7 @@
         "facebook"
       ],
       "permalinks": {
-        "facebook": "https://www.facebook.com/reel/1011741281682415"
+        "facebook": "/reel/1011741281682415/"
       },
       "metrics": {
         "likes": 0,
@@ -245,7 +245,7 @@
         "instagram"
       ],
       "permalinks": {
-        "instagram": "https://www.instagram.com/reel/Db1NDg1EUd2"
+        "instagram": "https://www.instagram.com/reel/Db1NDg1EUd2/"
       },
       "metrics": {
         "likes": 0,
@@ -264,7 +264,7 @@
         "instagram"
       ],
       "permalinks": {
-        "instagram": "https://www.instagram.com/p/DbyctRmI3BK"
+        "instagram": "https://www.instagram.com/p/DbyctRmI3BK/"
       },
       "metrics": {
         "likes": 0,
@@ -280,14 +280,14 @@
       "published_at": "2026-08-06T09:33:13Z",
       "scheduled_at": null,
       "platforms": [
-        "facebook",
+        "youtube",
         "instagram",
-        "youtube"
+        "facebook"
       ],
       "permalinks": {
         "youtube": "https://www.youtube.com/watch?v=NYDSJyPhqMA",
         "instagram": "https://www.instagram.com/reel/DbsZm4OCvah/",
-        "facebook": "https://www.facebook.com/reel/1763384021358883/"
+        "facebook": "/reel/1763384021358883/"
       },
       "metrics": {
         "likes": 1,
@@ -306,7 +306,7 @@
         "instagram"
       ],
       "permalinks": {
-        "instagram": "https://www.instagram.com/p/DbnJet-oKkt"
+        "instagram": "https://www.instagram.com/p/DbnJet-oKkt/"
       },
       "metrics": {
         "likes": 1,
@@ -344,7 +344,7 @@
         "facebook"
       ],
       "permalinks": {
-        "facebook": "https://www.facebook.com/122099213643429346/posts/122097099171429346"
+        "facebook": "https://www.facebook.com/122099213643429346/posts/122097099171429346?substory_index=1770801363923284"
       },
       "metrics": {
         "likes": 0,
