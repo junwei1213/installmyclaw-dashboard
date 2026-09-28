@@ -1,9 +1,9 @@
 {
   "updated_at": [
-    "2026-09-24T01:31:37Z",
-    "2026-09-25T01:11:17Z"
+    "2026-09-25T01:11:17Z",
+    "2026-09-28T01:15:39Z"
   ],
-  "kpis_same": true,
+  "kpis_same": false,
   "kpi_prev": {
     "posts_published": 15,
     "posts_scheduled": 0,
@@ -17,7 +17,7 @@
     "dm_conversations": 0
   },
   "kpi_new": {
-    "posts_published": 15,
+    "posts_published": 17,
     "posts_scheduled": 0,
     "posts_failed": 1,
     "likes": 4,
@@ -25,38 +25,61 @@
     "shares": 4,
     "saves": 0,
     "inbox_comments": 0,
-    "dm_unread": 0,
-    "dm_conversations": 0
+    "dm_unread": 2,
+    "dm_conversations": 1
   },
   "channels_all_active": true,
-  "new_posts": [],
-  "dm_unread": 0,
+  "new_posts": [
+    {
+      "id": "93487e4c",
+      "platforms": [
+        "instagram",
+        "facebook",
+        "tiktok",
+        "youtube"
+      ],
+      "published_at": "2026-09-27T10:19:35.160728Z",
+      "title": "On the ladder, phone buzzing? AI answers the aircond enquiry"
+    },
+    {
+      "id": "ae8ab412",
+      "platforms": [
+        "instagram"
+      ],
+      "published_at": "2026-09-26T08:05:26.701336Z",
+      "title": "Claw Grow doesn't stop at your WhatsApp chats"
+    }
+  ],
+  "dm_unread": 2,
   "inbox_comments": 0,
   "failed": 1,
   "failed_detail": "YouTube 0c4a5536 validation.video_url HEAD 403 (republished as 54cc3b41)",
   "latest": [
     {
+      "id": "93487e4c",
+      "platforms": [
+        "instagram",
+        "facebook",
+        "tiktok",
+        "youtube"
+      ],
+      "published_at": "2026-09-27T10:19:35.160728Z"
+    },
+    {
+      "id": "ae8ab412",
+      "platforms": [
+        "instagram"
+      ],
+      "published_at": "2026-09-26T08:05:26.701336Z"
+    },
+    {
       "id": "54cc3b41",
       "platforms": [
         "youtube"
       ],
-      "published_at": "2026-09-10T09:08:25Z"
-    },
-    {
-      "id": "568b4159",
-      "platforms": [
-        "instagram"
-      ],
-      "published_at": "2026-09-10T09:00:30Z"
-    },
-    {
-      "id": "2e57201c",
-      "platforms": [
-        "facebook"
-      ],
-      "published_at": "2026-09-10T08:59:19Z"
+      "published_at": "2026-09-10T09:08:25.396548Z"
     }
   ],
-  "quiet": true,
-  "note": "Excluded duplicate FB record 69f43b4b (same reel as 2e57201c). AE/BONR DMs ignored."
+  "quiet": false,
+  "note": "Excluded duplicate FB 975db5aa (same reel as 93487e4c) and 69f43b4b (same as 2e57201c). AE/BONR DMs ignored. TikTok channel added. Installmyclaw DM unread=2 (Tan Jun Wei)."
 }
