@@ -1,6 +1,6 @@
 {
   "brand": "InstallMyClaw",
-  "updated_at": "2026-09-28T01:15:39Z",
+  "updated_at": "2026-09-29T01:19:54Z",
   "capabilities": {
     "publish": "via_agent",
     "inbox": "via_agent",
@@ -53,10 +53,10 @@
     }
   ],
   "kpis": {
-    "posts_published": 17,
+    "posts_published": 18,
     "posts_scheduled": 0,
     "posts_failed": 1,
-    "likes": 4,
+    "likes": 6,
     "comments": 0,
     "shares": 4,
     "saves": 0,
@@ -66,8 +66,33 @@
   },
   "posts": [
     {
+      "id": "b011ba85-b6b8-435c-badc-2cba50910754",
+      "title": "Teaching a class and the phone keeps buzzing?",
+      "status": "published",
+      "published_at": "2026-09-28T09:07:44.355107Z",
+      "scheduled_at": null,
+      "platforms": [
+        "instagram",
+        "facebook",
+        "tiktok",
+        "youtube"
+      ],
+      "permalinks": {
+        "instagram": "https://www.instagram.com/reel/Dd00y-jDO7Q/",
+        "facebook": "/reel/1967058167586727/",
+        "tiktok": "https://www.tiktok.com/@installmyclaw/video/7690509931006463238",
+        "youtube": "https://www.youtube.com/watch?v=eFIYt5g74Tc"
+      },
+      "metrics": {
+        "likes": 2,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    },
+    {
       "id": "93487e4c-76ba-4f72-88e5-61b23c774e6d",
-      "title": "On the ladder, phone buzzing? AI answers the aircond enquiry",
+      "title": "On the ladder, phone buzzing? AI answers the aircond enquiry, you confirm the quote and visit time.",
       "status": "published",
       "published_at": "2026-09-27T10:19:35.160728Z",
       "scheduled_at": null,
@@ -79,7 +104,7 @@
       ],
       "permalinks": {
         "instagram": "https://www.instagram.com/reel/DdyYOvCEemc/",
-        "facebook": "https://www.facebook.com/reel/1743729046740445/",
+        "facebook": "/reel/1743729046740445/",
         "tiktok": "https://www.tiktok.com/@installmyclaw/video/7690157546836888850",
         "youtube": "https://www.youtube.com/watch?v=7tWJuRVKRo8"
       },
@@ -92,7 +117,7 @@
     },
     {
       "id": "ae8ab412-6dfc-4882-968a-11c2d259fa21",
-      "title": "Claw Grow doesn't stop at your WhatsApp chats",
+      "title": "Claw Grow doesn't stop at your WhatsApp chats. It can also prepare text posts for your Facebook: you preview the draft, ",
       "status": "published",
       "published_at": "2026-09-26T08:05:26.701336Z",
       "scheduled_at": null,
@@ -168,9 +193,9 @@
     },
     {
       "id": "c9b0c935-3083-4185-b3d4-d2e99c8cfc87",
-      "title": "InstallMyClaw 内容发布功能测试帖",
+      "title": "这是一条 InstallMyClaw 内容发布功能测试帖子，用于验证发布流程与结果回执。",
       "status": "published",
-      "published_at": "2026-09-05T17:43:28Z",
+      "published_at": "2026-09-05T17:43:28.002356Z",
       "scheduled_at": null,
       "platforms": [
         "facebook"
@@ -187,9 +212,9 @@
     },
     {
       "id": "bcd148dd-43fe-485b-bb7d-ace5897e9db0",
-      "title": "学员分享｜Kiyo：用 AI 把想法做成 Website",
+      "title": "不会从哪里开始，也可以先让 AI 帮你把想法变成一个 Website。✨",
       "status": "published",
-      "published_at": "2026-08-12T12:36:13Z",
+      "published_at": "2026-08-12T12:36:13.305252Z",
       "scheduled_at": null,
       "platforms": [
         "instagram"
@@ -206,9 +231,9 @@
     },
     {
       "id": "eac37acb-e167-4858-bc47-9bbe923d1b34",
-      "title": "学员分享｜Sharon：用 ChatGPT 做招聘网站",
+      "title": "Sharon 从事招聘与人力资源工作。\\n\\n这堂 AI 实战课，她用 ChatGPT Codex 的 @Sites 功能，在短短 10 分钟内生成 Landing Page 初版，再通过 Prompt 持续优化。\\n\\n现在，求职者可以直",
       "status": "published",
-      "published_at": "2026-08-12T12:16:33Z",
+      "published_at": "2026-08-12T12:16:33.239442Z",
       "scheduled_at": null,
       "platforms": [
         "instagram"
@@ -225,9 +250,9 @@
     },
     {
       "id": "9f8d1fa5-06b1-4cac-a686-5e79cf750b9b",
-      "title": "学员分享｜Sharon：用 ChatGPT 做招聘网站",
+      "title": "学员分享｜用 ChatGPT 做招聘网站，10 分钟完成 Landing Page 初版",
       "status": "published",
-      "published_at": "2026-08-12T12:14:54Z",
+      "published_at": "2026-08-12T12:14:54.809678Z",
       "scheduled_at": null,
       "platforms": [
         "facebook",
@@ -248,7 +273,7 @@
       "id": "479d5efe-3ab7-4a48-a591-5a71b3f0d329",
       "title": "学员分享｜Joey：用 ChatGPT 当天完成个人网站",
       "status": "published",
-      "published_at": "2026-08-11T15:15:19Z",
+      "published_at": "2026-08-11T15:15:19.400926Z",
       "scheduled_at": null,
       "platforms": [
         "facebook",
@@ -269,9 +294,9 @@
     },
     {
       "id": "86604d4d-583c-46ee-9049-c90cb265d6a6",
-      "title": "学员分享｜Kiyo：用 AI 把想法做成 Website",
+      "title": "不会从哪里开始，也可以先让 AI 帮你把想法变成一个 Website。✨",
       "status": "published",
-      "published_at": "2026-08-10T14:37:44Z",
+      "published_at": "2026-08-10T14:37:44.511266Z",
       "scheduled_at": null,
       "platforms": [
         "facebook"
@@ -288,7 +313,7 @@
     },
     {
       "id": "3fa68292-f01c-4fcb-89ce-becaedcac313",
-      "title": "学员分享｜Lawrence：当天完成 Website + WhatsApp",
+      "title": "以前做一个 Landing Page，可能需要 2–3 天。",
       "status": "published",
       "published_at": "2026-08-09T19:36:37Z",
       "scheduled_at": null,
@@ -307,7 +332,7 @@
     },
     {
       "id": "8c2f5e22-ac90-4b51-8ffc-d51fb974457a",
-      "title": "AI 个人网站实战班圆满落幕",
+      "title": "不会写代码，也能完成自己的个人网站吗？",
       "status": "published",
       "published_at": "2026-08-08T17:55:24Z",
       "scheduled_at": null,
@@ -326,9 +351,9 @@
     },
     {
       "id": "48520723-7340-4ff8-8d6f-f80acd0b4808",
-      "title": "MiniMax H3：AI 视频生成走向普通人",
+      "title": "AI 视频生成正在走向普通人｜MiniMax H3 本地部署",
       "status": "published",
-      "published_at": "2026-08-06T09:33:13Z",
+      "published_at": "2026-08-06T09:33:13.716849Z",
       "scheduled_at": null,
       "platforms": [
         "youtube",
@@ -349,7 +374,7 @@
     },
     {
       "id": "3e24ccaa-d554-43f0-975b-a15dbd30f0ea",
-      "title": "给自己做一个「专属主页」海报",
+      "title": "给自己做一个「专属主页」🚀",
       "status": "published",
       "published_at": "2026-08-04T08:35:34Z",
       "scheduled_at": null,
@@ -368,7 +393,7 @@
     },
     {
       "id": "a7416936-0e54-46ae-96ef-a8e5a3489362",
-      "title": "给自己做一个「专属主页」海报",
+      "title": "给自己做一个「专属主页」🚀",
       "status": "published",
       "published_at": "2026-08-04T08:35:31Z",
       "scheduled_at": null,
@@ -387,7 +412,7 @@
     },
     {
       "id": "f1593567-f662-437e-8127-1718f18051ac",
-      "title": "Installmyclaw Facebook 帖子",
+      "title": "Untitled",
       "status": "published",
       "published_at": "2026-08-04T05:49:37Z",
       "scheduled_at": null,

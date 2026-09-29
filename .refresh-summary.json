@@ -1,22 +1,10 @@
 {
   "updated_at": [
-    "2026-09-25T01:11:17Z",
-    "2026-09-28T01:15:39Z"
+    "2026-09-28T01:15:39Z",
+    "2026-09-29T01:19:54Z"
   ],
   "kpis_same": false,
   "kpi_prev": {
-    "posts_published": 15,
-    "posts_scheduled": 0,
-    "posts_failed": 1,
-    "likes": 4,
-    "comments": 0,
-    "shares": 4,
-    "saves": 0,
-    "inbox_comments": 0,
-    "dm_unread": 0,
-    "dm_conversations": 0
-  },
-  "kpi_new": {
     "posts_published": 17,
     "posts_scheduled": 0,
     "posts_failed": 1,
@@ -28,26 +16,36 @@
     "dm_unread": 2,
     "dm_conversations": 1
   },
+  "kpi_new": {
+    "posts_published": 18,
+    "posts_scheduled": 0,
+    "posts_failed": 1,
+    "likes": 6,
+    "comments": 0,
+    "shares": 4,
+    "saves": 0,
+    "inbox_comments": 0,
+    "dm_unread": 2,
+    "dm_conversations": 1
+  },
   "channels_all_active": true,
   "new_posts": [
     {
-      "id": "93487e4c",
+      "id": "b011ba85",
       "platforms": [
         "instagram",
         "facebook",
         "tiktok",
         "youtube"
       ],
-      "published_at": "2026-09-27T10:19:35.160728Z",
-      "title": "On the ladder, phone buzzing? AI answers the aircond enquiry"
-    },
-    {
-      "id": "ae8ab412",
-      "platforms": [
-        "instagram"
-      ],
-      "published_at": "2026-09-26T08:05:26.701336Z",
-      "title": "Claw Grow doesn't stop at your WhatsApp chats"
+      "published_at": "2026-09-28T09:07:44.355107Z",
+      "title": "Teaching a class and the phone keeps buzzing?",
+      "metrics": {
+        "likes": 2,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
     }
   ],
   "dm_unread": 2,
@@ -55,6 +53,16 @@
   "failed": 1,
   "failed_detail": "YouTube 0c4a5536 validation.video_url HEAD 403 (republished as 54cc3b41)",
   "latest": [
+    {
+      "id": "b011ba85",
+      "platforms": [
+        "instagram",
+        "facebook",
+        "tiktok",
+        "youtube"
+      ],
+      "published_at": "2026-09-28T09:07:44.355107Z"
+    },
     {
       "id": "93487e4c",
       "platforms": [
@@ -71,15 +79,65 @@
         "instagram"
       ],
       "published_at": "2026-09-26T08:05:26.701336Z"
-    },
-    {
-      "id": "54cc3b41",
-      "platforms": [
-        "youtube"
-      ],
-      "published_at": "2026-09-10T09:08:25.396548Z"
     }
   ],
+  "excluded": [
+    [
+      "975db5aa",
+      "dup_fb",
+      "93487e4c"
+    ],
+    [
+      "69f43b4b",
+      "dup_fb",
+      "2e57201c"
+    ],
+    [
+      "fc4509c2",
+      "dup_fb",
+      "48520723"
+    ],
+    [
+      "77667b1b",
+      "dup_fb",
+      "8c2f5e22"
+    ],
+    [
+      "a63a9ef0",
+      "dup_fb",
+      "3fa68292"
+    ],
+    [
+      "e547768e",
+      "dup_fb",
+      "86604d4d"
+    ],
+    [
+      "14cb88b8",
+      "dup_fb",
+      "479d5efe"
+    ],
+    [
+      "2ada0dd6",
+      "dup_fb",
+      "eac37acb"
+    ],
+    [
+      "2d8a0eeb",
+      "pre_2026",
+      "youtube"
+    ],
+    [
+      "bf92f734",
+      "pre_2026",
+      "youtube"
+    ],
+    [
+      "bdc13c51",
+      "final_dup",
+      "b011ba85"
+    ]
+  ],
   "quiet": false,
-  "note": "Excluded duplicate FB 975db5aa (same reel as 93487e4c) and 69f43b4b (same as 2e57201c). AE/BONR DMs ignored. TikTok channel added. Installmyclaw DM unread=2 (Tan Jun Wei)."
+  "note": "Excluded FB dups (975db5aa/69f43b4b/bdc13c51 etc). AE/BONR ignored. New class reel b011ba85. DM unread=2 remains."
 }
