@@ -1,9 +1,9 @@
 {
   "updated_at": [
-    "2026-09-29T01:19:54Z",
-    "2026-09-30T01:18:08Z"
+    "2026-09-30T01:18:08Z",
+    "2026-10-01T01:27:10Z"
   ],
-  "kpis_same": true,
+  "kpis_same": false,
   "kpi_prev": {
     "posts_published": 18,
     "posts_scheduled": 0,
@@ -17,24 +17,79 @@
     "dm_conversations": 1
   },
   "kpi_new": {
-    "posts_published": 18,
-    "posts_scheduled": 0,
+    "posts_published": 20,
+    "posts_scheduled": 3,
     "posts_failed": 1,
-    "likes": 6,
-    "comments": 0,
-    "shares": 4,
+    "likes": 8,
+    "comments": 1,
+    "shares": 5,
     "saves": 0,
-    "inbox_comments": 0,
+    "inbox_comments": 1,
     "dm_unread": 2,
     "dm_conversations": 1
   },
   "channels_all_active": true,
-  "new_posts": [],
+  "new_posts": [
+    {
+      "id": "92d281be",
+      "title": "修鞋修到手没空，客人的 WhatsApp 一条都回不上……",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "tiktok",
+        "youtube"
+      ],
+      "published_at": "2026-09-30T11:08:35.825858Z",
+      "metrics": {
+        "likes": 2,
+        "comments": 0,
+        "shares": 1,
+        "saves": 0
+      }
+    },
+    {
+      "id": "936d24b7",
+      "title": "老板睡了，它还在上班。",
+      "platforms": [
+        "instagram",
+        "facebook",
+        "tiktok",
+        "youtube"
+      ],
+      "published_at": "2026-09-30T05:21:28.617633Z",
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    }
+  ],
   "dm_unread": 2,
-  "inbox_comments": 0,
+  "inbox_comments": 1,
   "failed": 1,
   "failed_detail": "YouTube 0c4a5536 validation.video_url HEAD 403 (republished as 54cc3b41)",
   "latest": [
+    {
+      "id": "92d281be",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "tiktok",
+        "youtube"
+      ],
+      "published_at": "2026-09-30T11:08:35.825858Z"
+    },
+    {
+      "id": "936d24b7",
+      "platforms": [
+        "instagram",
+        "facebook",
+        "tiktok",
+        "youtube"
+      ],
+      "published_at": "2026-09-30T05:21:28.617633Z"
+    },
     {
       "id": "b011ba85",
       "platforms": [
@@ -44,25 +99,8 @@
         "youtube"
       ],
       "published_at": "2026-09-28T09:07:44.355107Z"
-    },
-    {
-      "id": "93487e4c",
-      "platforms": [
-        "instagram",
-        "facebook",
-        "tiktok",
-        "youtube"
-      ],
-      "published_at": "2026-09-27T10:19:35.160728Z"
-    },
-    {
-      "id": "ae8ab412",
-      "platforms": [
-        "instagram"
-      ],
-      "published_at": "2026-09-26T08:05:26.701336Z"
     }
   ],
   "quiet": false,
-  "note": "No new IMC posts since 09-29. KPIs unchanged. DM unread=2 remains (Tan Jun Wei). AE/BONR excluded. Failed YT 0c4a5536 remains."
+  "note": "2 new IMC multi-platform reels since 09-30 baseline (shoe-repair + overnight AI). 3 scheduled Oct1–3. KPIs posts=20 likes=8 comments=1 shares=5. DM unread=2 (Tan Jun Wei). Inbox comments=1 (class buzzing FB reel). AE/BONR excluded; FB dups c7ca7350/6ccad6b0/bdc13c51 excluded. Failed YT 0c4a5536 remains."
 }
