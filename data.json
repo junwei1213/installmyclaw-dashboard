@@ -1,6 +1,6 @@
 {
   "brand": "InstallMyClaw",
-  "updated_at": "2026-10-01T01:27:10Z",
+  "updated_at": "2026-10-02T01:13:59Z",
   "capabilities": {
     "publish": "via_agent",
     "inbox": "via_agent",
@@ -53,12 +53,12 @@
     }
   ],
   "kpis": {
-    "posts_published": 20,
-    "posts_scheduled": 3,
+    "posts_published": 21,
+    "posts_scheduled": 2,
     "posts_failed": 1,
-    "likes": 8,
+    "likes": 12,
     "comments": 1,
-    "shares": 5,
+    "shares": 4,
     "saves": 0,
     "inbox_comments": 1,
     "dm_unread": 2,
@@ -66,14 +66,39 @@
   },
   "posts": [
     {
+      "id": "932118ed-be06-4eb2-902a-880b98887da8",
+      "title": "客人讲英文、马来文，老板不会也不怕｜WhatsApp AI 员工（马来西亚小生意）",
+      "status": "published",
+      "published_at": "2026-10-01T12:00:03.736845Z",
+      "scheduled_at": "2026-10-01T12:00:00Z",
+      "platforms": [
+        "instagram",
+        "facebook",
+        "tiktok",
+        "youtube"
+      ],
+      "permalinks": {
+        "facebook": "/reel/1759639975154411/",
+        "instagram": "https://www.instagram.com/reel/Dd82_eDjSsN/",
+        "tiktok": "https://www.tiktok.com/@installmyclaw/video/7691667984770747654",
+        "youtube": "https://www.youtube.com/watch?v=WTJAhAXR_cs"
+      },
+      "metrics": {
+        "likes": 2,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    },
+    {
       "id": "92d281be-28b0-44de-9a23-be2f085319db",
       "title": "修鞋修到手没空，客人的 WhatsApp 一条都回不上……",
       "status": "published",
       "published_at": "2026-09-30T11:08:35.825858Z",
       "scheduled_at": null,
       "platforms": [
-        "facebook",
         "instagram",
+        "facebook",
         "tiktok",
         "youtube"
       ],
@@ -84,9 +109,9 @@
         "youtube": "https://www.youtube.com/watch?v=kuCe9ySp_9k"
       },
       "metrics": {
-        "likes": 2,
+        "likes": 4,
         "comments": 0,
-        "shares": 1,
+        "shares": 0,
         "saves": 0
       }
     },
@@ -142,7 +167,7 @@
     },
     {
       "id": "93487e4c-76ba-4f72-88e5-61b23c774e6d",
-      "title": "On the ladder, phone buzzing? AI answers the aircond enquiry, you confirm the quote and visit time. DM us to see how. #A",
+      "title": "On the ladder, phone buzzing? AI answers the aircond enquiry, you confirm the quote and visit time.",
       "status": "published",
       "published_at": "2026-09-27T10:19:35.160728Z",
       "scheduled_at": null,
@@ -186,7 +211,7 @@
     },
     {
       "id": "54cc3b41-762e-44c9-bf77-753d6fd30903",
-      "title": "马来西亚做生意的你：顾客 WhatsApp 来问，你刚好在忙？",
+      "title": "顾客在问，你刚好在忙？WhatsApp AI 客服示范｜马来西亚 InstallMyClaw",
       "status": "published",
       "published_at": "2026-09-10T09:08:25.396548Z",
       "scheduled_at": null,
@@ -326,8 +351,8 @@
       "published_at": "2026-08-11T15:15:19.400926Z",
       "scheduled_at": null,
       "platforms": [
-        "facebook",
         "instagram",
+        "facebook",
         "youtube"
       ],
       "permalinks": {
@@ -406,9 +431,9 @@
       "published_at": "2026-08-06T09:33:13.716849Z",
       "scheduled_at": null,
       "platforms": [
-        "youtube",
         "instagram",
-        "facebook"
+        "facebook",
+        "youtube"
       ],
       "permalinks": {
         "youtube": "https://www.youtube.com/watch?v=NYDSJyPhqMA",
@@ -483,34 +508,14 @@
   "queue": {
     "scheduled": [
       {
-        "id": "932118ed-be06-4eb2-902a-880b98887da8",
-        "title": "客人讲英文、马来文，老板不会也不怕｜WhatsApp AI 员工（马来西亚小生意）",
-        "status": "scheduled",
-        "published_at": null,
-        "scheduled_at": "2026-10-01T12:00:00Z",
-        "platforms": [
-          "facebook",
-          "instagram",
-          "tiktok",
-          "youtube"
-        ],
-        "permalinks": {},
-        "metrics": {
-          "likes": 0,
-          "comments": 0,
-          "shares": 0,
-          "saves": 0
-        }
-      },
-      {
         "id": "d5e22b9a-6226-4d24-b527-3c24af03ec4c",
         "title": "这个 AI 员工是谁请来的？｜WhatsApp AI 员工（马来西亚小生意）",
         "status": "scheduled",
         "published_at": null,
         "scheduled_at": "2026-10-02T12:00:00Z",
         "platforms": [
-          "facebook",
           "instagram",
+          "facebook",
           "tiktok",
           "youtube"
         ],
@@ -529,8 +534,8 @@
         "published_at": null,
         "scheduled_at": "2026-10-03T12:00:00Z",
         "platforms": [
-          "facebook",
           "instagram",
+          "facebook",
           "tiktok",
           "youtube"
         ],
@@ -570,7 +575,7 @@
     "comment_posts": [
       {
         "platform": "facebook",
-        "snippet": "Teaching a class and the phone keeps buzzing? Routine questions get answered from your approved FAQs, and anything that needs a person goes to you.",
+        "snippet": "Teaching a class and the phone keeps buzzing? Routine questions get answered from your approved FAQs, and anything that needs a person goes to you. DM us to learn more. #InstallMyClaw #YogaStudio #Wha",
         "comment_count": 1,
         "like_count": 0,
         "permalink": "https://www.facebook.com/reel/1967058167586727/"
