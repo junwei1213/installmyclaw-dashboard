@@ -1,6 +1,6 @@
 {
   "brand": "InstallMyClaw",
-  "updated_at": "2026-10-02T01:13:59Z",
+  "updated_at": "2026-10-05T01:14:12Z",
   "capabilities": {
     "publish": "via_agent",
     "inbox": "via_agent",
@@ -53,18 +53,118 @@
     }
   ],
   "kpis": {
-    "posts_published": 21,
-    "posts_scheduled": 2,
+    "posts_published": 25,
+    "posts_scheduled": 0,
     "posts_failed": 1,
-    "likes": 12,
+    "likes": 22,
     "comments": 1,
     "shares": 4,
     "saves": 0,
-    "inbox_comments": 1,
-    "dm_unread": 2,
-    "dm_conversations": 1
+    "inbox_comments": 4,
+    "dm_unread": 7,
+    "dm_conversations": 2
   },
   "posts": [
+    {
+      "id": "53c972a0-ed56-4d5b-93db-23837cb5bc66",
+      "title": "每一个忙碌的老板｜WhatsApp AI 员工帮你回客人（马来西亚小生意）",
+      "status": "published",
+      "published_at": "2026-10-03T12:00:03.590388Z",
+      "scheduled_at": "2026-10-03T12:00:00Z",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "tiktok",
+        "youtube"
+      ],
+      "permalinks": {
+        "facebook": "/reel/4472835562861819/",
+        "instagram": "https://www.instagram.com/reel/DeCAlMfEaZ5/",
+        "tiktok": "https://www.tiktok.com/@installmyclaw/video/7692409968393243910",
+        "youtube": "https://www.youtube.com/watch?v=JBvLVGJd9H8"
+      },
+      "metrics": {
+        "likes": 4,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    },
+    {
+      "id": "915e76d6-7e72-433f-a182-5fcf25de4874",
+      "title": "F1 回到雪邦：换胎两秒，你回 WhatsApp 要多久？｜AI 员工",
+      "status": "published",
+      "published_at": "2026-10-03T07:00:03.337471Z",
+      "scheduled_at": "2026-10-03T07:00:00Z",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "tiktok",
+        "youtube"
+      ],
+      "permalinks": {
+        "facebook": "/reel/1760813795206676/",
+        "instagram": "https://www.instagram.com/reel/DeBeQI6gjRv/",
+        "tiktok": "https://www.tiktok.com/@installmyclaw/video/7692332824837246226",
+        "youtube": "https://www.youtube.com/watch?v=_uJLLvZ3-i8"
+      },
+      "metrics": {
+        "likes": 2,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    },
+    {
+      "id": "2521b24c-1430-49c0-96a7-834f7bd498d0",
+      "title": "雪邦 F1 周末午市，老板娘手没空｜WhatsApp AI 员工先回客人",
+      "status": "published",
+      "published_at": "2026-10-03T05:00:03.174419Z",
+      "scheduled_at": "2026-10-03T05:00:00Z",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "tiktok",
+        "youtube"
+      ],
+      "permalinks": {
+        "facebook": "/reel/1078891888187803/",
+        "instagram": "https://www.instagram.com/reel/DeBQiHXCkNS/",
+        "tiktok": "https://www.tiktok.com/@installmyclaw/video/7692301878507359496",
+        "youtube": "https://www.youtube.com/watch?v=9aUgK0ecQIw"
+      },
+      "metrics": {
+        "likes": 2,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    },
+    {
+      "id": "d5e22b9a-6226-4d24-b527-3c24af03ec4c",
+      "title": "这个 AI 员工是谁请来的？｜WhatsApp AI 员工（马来西亚小生意）",
+      "status": "published",
+      "published_at": "2026-10-02T12:00:03.940365Z",
+      "scheduled_at": "2026-10-02T12:00:00Z",
+      "platforms": [
+        "facebook",
+        "instagram",
+        "tiktok",
+        "youtube"
+      ],
+      "permalinks": {
+        "facebook": "/reel/2217821855444593/",
+        "instagram": "https://www.instagram.com/reel/Dd_b2makbpz/",
+        "tiktok": "https://www.tiktok.com/@installmyclaw/video/7692039061917240594",
+        "youtube": "https://www.youtube.com/watch?v=KDlkWF6mTIE"
+      },
+      "metrics": {
+        "likes": 1,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    },
     {
       "id": "932118ed-be06-4eb2-902a-880b98887da8",
       "title": "客人讲英文、马来文，老板不会也不怕｜WhatsApp AI 员工（马来西亚小生意）",
@@ -72,8 +172,8 @@
       "published_at": "2026-10-01T12:00:03.736845Z",
       "scheduled_at": "2026-10-01T12:00:00Z",
       "platforms": [
-        "instagram",
         "facebook",
+        "instagram",
         "tiktok",
         "youtube"
       ],
@@ -84,7 +184,7 @@
         "youtube": "https://www.youtube.com/watch?v=WTJAhAXR_cs"
       },
       "metrics": {
-        "likes": 2,
+        "likes": 3,
         "comments": 0,
         "shares": 0,
         "saves": 0
@@ -97,8 +197,8 @@
       "published_at": "2026-09-30T11:08:35.825858Z",
       "scheduled_at": null,
       "platforms": [
-        "instagram",
         "facebook",
+        "instagram",
         "tiktok",
         "youtube"
       ],
@@ -351,8 +451,8 @@
       "published_at": "2026-08-11T15:15:19.400926Z",
       "scheduled_at": null,
       "platforms": [
-        "instagram",
         "facebook",
+        "instagram",
         "youtube"
       ],
       "permalinks": {
@@ -431,9 +531,9 @@
       "published_at": "2026-08-06T09:33:13.716849Z",
       "scheduled_at": null,
       "platforms": [
+        "youtube",
         "instagram",
-        "facebook",
-        "youtube"
+        "facebook"
       ],
       "permalinks": {
         "youtube": "https://www.youtube.com/watch?v=NYDSJyPhqMA",
@@ -506,48 +606,7 @@
     }
   ],
   "queue": {
-    "scheduled": [
-      {
-        "id": "d5e22b9a-6226-4d24-b527-3c24af03ec4c",
-        "title": "这个 AI 员工是谁请来的？｜WhatsApp AI 员工（马来西亚小生意）",
-        "status": "scheduled",
-        "published_at": null,
-        "scheduled_at": "2026-10-02T12:00:00Z",
-        "platforms": [
-          "instagram",
-          "facebook",
-          "tiktok",
-          "youtube"
-        ],
-        "permalinks": {},
-        "metrics": {
-          "likes": 0,
-          "comments": 0,
-          "shares": 0,
-          "saves": 0
-        }
-      },
-      {
-        "id": "53c972a0-ed56-4d5b-93db-23837cb5bc66",
-        "title": "每一个忙碌的老板｜WhatsApp AI 员工帮你回客人（马来西亚小生意）",
-        "status": "scheduled",
-        "published_at": null,
-        "scheduled_at": "2026-10-03T12:00:00Z",
-        "platforms": [
-          "instagram",
-          "facebook",
-          "tiktok",
-          "youtube"
-        ],
-        "permalinks": {},
-        "metrics": {
-          "likes": 0,
-          "comments": 0,
-          "shares": 0,
-          "saves": 0
-        }
-      }
-    ],
+    "scheduled": [],
     "draft": [],
     "failed": [
       {
@@ -567,12 +626,19 @@
           "saves": 0
         },
         "error": "validation.video_url: Video URL is not accessible (HEAD returned 403)",
-        "created_at": "2026-09-10T08:59:04Z"
+        "created_at": "2026-09-10T08:59:04.920483Z"
       }
     ]
   },
   "inbox": {
     "comment_posts": [
+      {
+        "platform": "instagram",
+        "snippet": "拉煎饼、理发、修车、扎花、拉茶、裁衣—— 每一个忙碌的老板，手都停不下来。客人讲马来文、英文、华文都有，简单的交给 AI 员工先回。",
+        "comment_count": 3,
+        "like_count": 0,
+        "permalink": "https://www.instagram.com/reel/DeCAlMfEaZ5/"
+      },
       {
         "platform": "facebook",
         "snippet": "Teaching a class and the phone keeps buzzing? Routine questions get answered from your approved FAQs, and anything that needs a person goes to you. DM us to learn more. #InstallMyClaw #YogaStudio #Wha",
@@ -582,6 +648,15 @@
       }
     ],
     "dms": [
+      {
+        "id": "a3efd0ba-8175-444b-84c9-f0051a7cea5b",
+        "platform": "instagram",
+        "account_id": "acc_01KZB4GM5B4QV872A6T4AGQ6GQ",
+        "participant_name": "(未显示名字的 IG 用户)",
+        "last_message": "我追踪了 → 已自动回复「谢谢你的追踪！链接在这里 👇」（关注后领取链接流程）",
+        "last_message_at": "2026-10-03T16:20:16Z",
+        "unread_count": 5
+      },
       {
         "id": "b961cea2-7f95-4d0f-a39b-f9476a048f24",
         "platform": "facebook",
