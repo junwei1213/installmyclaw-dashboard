@@ -1,6 +1,6 @@
 {
   "brand": "InstallMyClaw",
-  "updated_at": "2026-10-05T01:14:12Z",
+  "updated_at": "2026-10-06T01:19:59Z",
   "capabilities": {
     "publish": "via_agent",
     "inbox": "via_agent",
@@ -652,7 +652,7 @@
         "id": "a3efd0ba-8175-444b-84c9-f0051a7cea5b",
         "platform": "instagram",
         "account_id": "acc_01KZB4GM5B4QV872A6T4AGQ6GQ",
-        "participant_name": "(未显示名字的 IG 用户)",
+        "participant_name": "justintan.my",
         "last_message": "我追踪了 → 已自动回复「谢谢你的追踪！链接在这里 👇」（关注后领取链接流程）",
         "last_message_at": "2026-10-03T16:20:16Z",
         "unread_count": 5
