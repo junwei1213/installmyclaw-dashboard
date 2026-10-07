@@ -1,6 +1,6 @@
 {
   "brand": "InstallMyClaw",
-  "updated_at": "2026-10-06T01:19:59Z",
+  "updated_at": "2026-10-07T01:17:00Z",
   "capabilities": {
     "publish": "via_agent",
     "inbox": "via_agent",
@@ -53,10 +53,10 @@
     }
   ],
   "kpis": {
-    "posts_published": 25,
+    "posts_published": 28,
     "posts_scheduled": 0,
     "posts_failed": 1,
-    "likes": 22,
+    "likes": 23,
     "comments": 1,
     "shares": 4,
     "saves": 0,
@@ -65,6 +65,65 @@
     "dm_conversations": 2
   },
   "posts": [
+    {
+      "id": "1ec8ac4b-d847-417b-b99b-6dc5be20cf76",
+      "title": "马来西亚小店怎么用 AI 自动回 WhatsApp、留言自动私信、一次排 6 个平台？｜InstallMyClaw 37 秒演示",
+      "status": "published",
+      "published_at": "2026-10-06T13:41:07.387702Z",
+      "scheduled_at": null,
+      "platforms": [
+        "tiktok"
+      ],
+      "permalinks": {
+        "tiktok": "https://www.tiktok.com/@installmyclaw/video/7693549060527066376"
+      },
+      "metrics": {
+        "likes": 1,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    },
+    {
+      "id": "42b2bb24-2705-4408-9c03-ed0c95f32097",
+      "title": "马来西亚小店怎么用 AI 自动回 WhatsApp、留言自动私信、一次排 6 个平台？｜InstallMyClaw 37 秒演示",
+      "status": "published",
+      "published_at": "2026-10-06T13:34:10.679262Z",
+      "scheduled_at": null,
+      "platforms": [
+        "facebook"
+      ],
+      "permalinks": {
+        "facebook": "/reel/1628939145557403/"
+      },
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    },
+    {
+      "id": "4192d1fc-79de-4583-b61d-a873c1ec42a7",
+      "title": "马来西亚小店怎么用 AI 自动回 WhatsApp、留言自动私信、一次排 6 个平台？｜InstallMyClaw 37 秒演示",
+      "status": "published",
+      "published_at": "2026-10-06T13:09:34.211784Z",
+      "scheduled_at": null,
+      "platforms": [
+        "instagram",
+        "youtube"
+      ],
+      "permalinks": {
+        "instagram": "https://www.instagram.com/reel/DeJ2z6RFeCA/",
+        "youtube": "https://www.youtube.com/watch?v=zwUemaorXNU"
+      },
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    },
     {
       "id": "53c972a0-ed56-4d5b-93db-23837cb5bc66",
       "title": "每一个忙碌的老板｜WhatsApp AI 员工帮你回客人（马来西亚小生意）",

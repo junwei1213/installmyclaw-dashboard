@@ -1,7 +1,7 @@
 {
   "updated_at": [
-    "2026-10-05T01:14:12Z",
-    "2026-10-06T01:19:59Z"
+    "2026-10-06T01:19:59Z",
+    "2026-10-07T01:17:00Z"
   ],
   "kpi_prev": {
     "posts_published": 25,
@@ -16,10 +16,10 @@
     "dm_conversations": 2
   },
   "kpi_new": {
-    "posts_published": 25,
+    "posts_published": 28,
     "posts_scheduled": 0,
     "posts_failed": 1,
-    "likes": 22,
+    "likes": 23,
     "comments": 1,
     "shares": 4,
     "saves": 0,
@@ -27,7 +27,11 @@
     "dm_unread": 7,
     "dm_conversations": 2
   },
-  "new_posts": [],
+  "new_posts": [
+    "1ec8ac4b-d847-417b-b99b-6dc5be20cf76",
+    "42b2bb24-2705-4408-9c03-ed0c95f32097",
+    "4192d1fc-79de-4583-b61d-a873c1ec42a7"
+  ],
   "quiet": false,
-  "reason": "no change but dm_unread=7"
+  "reason": "1 new reel (3 SocialAPI posts) + dm_unread=7"
 }
