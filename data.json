@@ -1,6 +1,6 @@
 {
   "brand": "InstallMyClaw",
-  "updated_at": "2026-10-08T01:13:35Z",
+  "updated_at": "2026-10-09T02:26:21Z",
   "capabilities": {
     "publish": "via_agent",
     "inbox": "via_agent",
@@ -53,10 +53,10 @@
     }
   ],
   "kpis": {
-    "posts_published": 34,
+    "posts_published": 40,
     "posts_scheduled": 0,
     "posts_failed": 1,
-    "likes": 23,
+    "likes": 28,
     "comments": 1,
     "shares": 4,
     "saves": 0,
@@ -66,14 +66,136 @@
   },
   "posts": [
     {
+      "id": "4045f6de-02b1-442b-bafc-61ffacc8f99e",
+      "title": "WhatsApp auto reply vs AI chatbot: which one actually answers \"Esok buka tak?\" 👀",
+      "status": "published",
+      "published_at": "2026-10-08T12:46:16.104846Z",
+      "scheduled_at": null,
+      "platforms": [
+        "tiktok"
+      ],
+      "permalinks": {
+        "tiktok": "https://www.tiktok.com/@installmyclaw/video/7694277105978232084"
+      },
+      "metrics": {
+        "likes": 3,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    },
+    {
+      "id": "07e787cd-0108-447e-8336-a315c8192ae5",
+      "title": "WhatsApp auto reply vs AI chatbot: which one actually answers \"Esok buka tak?\" 👀",
+      "status": "published",
+      "published_at": "2026-10-08T12:45:26.336777Z",
+      "scheduled_at": null,
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "permalinks": {
+        "instagram": "https://www.instagram.com/reel/DeO9rdhCmUF/",
+        "facebook": "/reel/1469963088320343/"
+      },
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    },
+    {
+      "id": "8819580b-0140-4c61-a710-659be2ddebff",
+      "title": "WhatsApp auto reply vs AI chatbot: which one actually answers \"Esok buka tak?\" 👀",
+      "status": "published",
+      "published_at": "2026-10-08T12:45:13Z",
+      "scheduled_at": null,
+      "platforms": [
+        "facebook"
+      ],
+      "permalinks": {
+        "facebook": "/reel/1469963088320343/"
+      },
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    },
+    {
+      "id": "14e6262d-20a4-4ca1-ae6b-819d8ed0a365",
+      "title": "WhatsApp auto reply sends the same message to everyone. An AI chatbot answers your customers' real questions from the an",
+      "status": "published",
+      "published_at": "2026-10-08T12:44:51.650331Z",
+      "scheduled_at": null,
+      "platforms": [
+        "youtube"
+      ],
+      "permalinks": {
+        "youtube": "https://www.youtube.com/watch?v=4F7SyJOO61Y"
+      },
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    },
+    {
+      "id": "3139319b-4f99-420d-93a1-53b857d1bf20",
+      "title": "WhatsApp is your second job?",
+      "status": "published",
+      "published_at": "2026-10-08T07:58:46.929008Z",
+      "scheduled_at": null,
+      "platforms": [
+        "tiktok",
+        "instagram",
+        "facebook",
+        "youtube"
+      ],
+      "permalinks": {
+        "tiktok": "https://www.tiktok.com/@installmyclaw/video/7694203182146243846",
+        "instagram": "https://www.instagram.com/reel/DeOc2GUD8Nq/",
+        "facebook": "/reel/1413081854135087/",
+        "youtube": "https://www.youtube.com/watch?v=MYWKX0ApxMc"
+      },
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    },
+    {
+      "id": "ed10f2b6-d6d8-4e48-8116-38646c82528c",
+      "title": "WhatsApp is your second job?",
+      "status": "published",
+      "published_at": "2026-10-08T07:58:24Z",
+      "scheduled_at": null,
+      "platforms": [
+        "facebook"
+      ],
+      "permalinks": {
+        "facebook": "/reel/1413081854135087/"
+      },
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    },
+    {
       "id": "2949cad1-5943-4537-b77a-d9e4afb179d1",
-      "title": "WhatsApp AI Auto Reply for Pet Grooming Shops in Malaysia",
+      "title": "Both hands in the suds, phone buzzing on the tub edge.",
       "status": "published",
       "published_at": "2026-10-07T18:38:54.430842Z",
       "scheduled_at": null,
       "platforms": [
-        "facebook",
         "instagram",
+        "facebook",
         "youtube"
       ],
       "permalinks": {
@@ -101,7 +223,7 @@
         "tiktok": "https://www.tiktok.com/@installmyclaw/video/7693991321656167681"
       },
       "metrics": {
-        "likes": 0,
+        "likes": 1,
         "comments": 0,
         "shares": 0,
         "saves": 0
@@ -120,7 +242,7 @@
         "tiktok": "https://www.tiktok.com/@installmyclaw/video/7693977324257086740?utm_campaign=tt4d_open_api&utm_source=aw57dblfyjh7nioc"
       },
       "metrics": {
-        "likes": 0,
+        "likes": 1,
         "comments": 0,
         "shares": 0,
         "saves": 0
@@ -133,8 +255,8 @@
       "published_at": "2026-10-07T17:27:11.812601Z",
       "scheduled_at": null,
       "platforms": [
-        "facebook",
         "instagram",
+        "facebook",
         "youtube"
       ],
       "permalinks": {
@@ -175,13 +297,15 @@
       "published_at": "2026-10-07T06:02:38.346904Z",
       "scheduled_at": null,
       "platforms": [
-        "facebook",
         "instagram",
+        "facebook",
+        "tiktok",
         "youtube"
       ],
       "permalinks": {
         "instagram": "https://www.instagram.com/reel/DeLqxQ6Ejfl/",
         "facebook": "/reel/29686510710937486/",
+        "tiktok": "https://www.tiktok.com/@installmyclaw/video/7693801838344228102",
         "youtube": "https://www.youtube.com/watch?v=IF0TxxVX5M0"
       },
       "metrics": {
@@ -193,7 +317,7 @@
     },
     {
       "id": "1ec8ac4b-d847-417b-b99b-6dc5be20cf76",
-      "title": "马来西亚小店怎么用 AI 自动回 WhatsApp、留言自动私信、一次排 6 个平台？｜InstallMyClaw 37 秒演示",
+      "title": "小店用 AI 接客的一天：示范店 Kopi Senja 的一条帖子，怎么变成一张订单。",
       "status": "published",
       "published_at": "2026-10-06T13:41:07.387702Z",
       "scheduled_at": null,
@@ -212,7 +336,7 @@
     },
     {
       "id": "42b2bb24-2705-4408-9c03-ed0c95f32097",
-      "title": "马来西亚小店怎么用 AI 自动回 WhatsApp、留言自动私信、一次排 6 个平台？｜InstallMyClaw 37 秒演示",
+      "title": "小店用 AI 接客的一天：示范店 Kopi Senja 的一条帖子，怎么变成一张订单。",
       "status": "published",
       "published_at": "2026-10-06T13:34:10.679262Z",
       "scheduled_at": null,
@@ -237,10 +361,14 @@
       "scheduled_at": null,
       "platforms": [
         "instagram",
+        "facebook",
+        "tiktok",
         "youtube"
       ],
       "permalinks": {
         "instagram": "https://www.instagram.com/reel/DeJ2z6RFeCA/",
+        "facebook": "/reel/3399342963602241/",
+        "tiktok": "https://www.tiktok.com/@installmyclaw/video/7693541095669501185",
         "youtube": "https://www.youtube.com/watch?v=zwUemaorXNU"
       },
       "metrics": {
@@ -277,7 +405,7 @@
     },
     {
       "id": "915e76d6-7e72-433f-a182-5fcf25de4874",
-      "title": "F1 回到雪邦：换胎两秒，你回 WhatsApp 要多久？｜AI 员工",
+      "title": "老板娘也想看雪邦 F1｜换胎 2 秒，你回客人要多久？（WhatsApp AI 员工）",
       "status": "published",
       "published_at": "2026-10-03T07:00:03.337471Z",
       "scheduled_at": "2026-10-03T07:00:00Z",
@@ -302,7 +430,7 @@
     },
     {
       "id": "2521b24c-1430-49c0-96a7-834f7bd498d0",
-      "title": "雪邦 F1 周末午市，老板娘手没空｜WhatsApp AI 员工先回客人",
+      "title": "老板娘的雪邦 F1 周末·午市篇｜23 条 WhatsApp 未读，AI 员工先回",
       "status": "published",
       "published_at": "2026-10-03T05:00:03.174419Z",
       "scheduled_at": "2026-10-03T05:00:00Z",
@@ -377,7 +505,7 @@
     },
     {
       "id": "92d281be-28b0-44de-9a23-be2f085319db",
-      "title": "修鞋修到手没空，客人的 WhatsApp 一条都回不上……",
+      "title": "媒体上传草稿",
       "status": "published",
       "published_at": "2026-09-30T11:08:35.825858Z",
       "scheduled_at": null,
@@ -402,7 +530,7 @@
     },
     {
       "id": "936d24b7-c016-45e9-bf8a-7c6ea9083400",
-      "title": "老板睡了，它还在上班。",
+      "title": "InstallMyClaw 媒体草稿",
       "status": "published",
       "published_at": "2026-09-30T05:21:28.617633Z",
       "scheduled_at": null,
@@ -542,7 +670,7 @@
         "facebook"
       ],
       "permalinks": {
-        "facebook": "https://www.facebook.com/reel/1784351249679444/"
+        "facebook": "/reel/1784351249679444/"
       },
       "metrics": {
         "likes": 1,

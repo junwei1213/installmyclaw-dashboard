@@ -1,21 +1,9 @@
 {
   "updated_at": [
-    "2026-10-07T01:17:00Z",
-    "2026-10-08T01:13:35Z"
+    "2026-10-08T01:13:35Z",
+    "2026-10-09T02:26:21Z"
   ],
   "kpi_prev": {
-    "posts_published": 28,
-    "posts_scheduled": 0,
-    "posts_failed": 1,
-    "likes": 23,
-    "comments": 1,
-    "shares": 4,
-    "saves": 0,
-    "inbox_comments": 4,
-    "dm_unread": 7,
-    "dm_conversations": 2
-  },
-  "kpi_new": {
     "posts_published": 34,
     "posts_scheduled": 0,
     "posts_failed": 1,
@@ -27,14 +15,26 @@
     "dm_unread": 7,
     "dm_conversations": 2
   },
+  "kpi_new": {
+    "posts_published": 40,
+    "posts_scheduled": 0,
+    "posts_failed": 1,
+    "likes": 28,
+    "comments": 1,
+    "shares": 4,
+    "saves": 0,
+    "inbox_comments": 4,
+    "dm_unread": 7,
+    "dm_conversations": 2
+  },
   "new_posts": [
-    "2949cad1-5943-4537-b77a-d9e4afb179d1",
-    "10fe299e-f652-4279-a843-86ddd8250f11",
-    "982ce868-5c6e-4ec2-b8f0-702cd21c08c4",
-    "6f2e56a9-3a06-4de2-9f34-303cf629dc4d",
-    "e046137c-93f6-47a6-a9a1-a06f6907a7f7",
-    "4631d766-f61c-4bcc-9eda-46d2754fe6a9"
+    "4045f6de-02b1-442b-bafc-61ffacc8f99e",
+    "07e787cd-0108-447e-8336-a315c8192ae5",
+    "8819580b-0140-4c61-a710-659be2ddebff",
+    "14e6262d-20a4-4ca1-ae6b-819d8ed0a365",
+    "3139319b-4f99-420d-93a1-53b857d1bf20",
+    "ed10f2b6-d6d8-4e48-8116-38646c82528c"
   ],
   "quiet": false,
-  "reason": "3 new reels (6 SocialAPI posts) + dm_unread=7"
+  "reason": "6 new SocialAPI posts + dm_unread=7 + KPI engagement change"
 }
