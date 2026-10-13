@@ -1,17 +1,17 @@
 {
   "updated_at": [
-    "2026-10-12T01:14:16Z",
-    "2026-10-12T01:14:16Z"
+    "2026-10-13T01:44:21Z",
+    "2026-10-13T01:44:21Z"
   ],
   "kpi_prev": {
     "posts_published": 40,
     "posts_scheduled": 0,
     "posts_failed": 1,
-    "likes": 28,
-    "comments": 1,
+    "likes": 29,
+    "comments": 2,
     "shares": 4,
     "saves": 0,
-    "inbox_comments": 4,
+    "inbox_comments": 5,
     "dm_unread": 7,
     "dm_conversations": 2
   },
@@ -29,5 +29,5 @@
   },
   "new_posts": [],
   "quiet": false,
-  "reason": "no new posts; +1 like, +1 FB comment (user's own SETUP test), dm_unread=7"
+  "reason": "no new posts, KPIs unchanged; dm_unread=7 still unread"
 }
