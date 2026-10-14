@@ -1,7 +1,7 @@
 {
   "updated_at": [
     "2026-10-13T01:44:21Z",
-    "2026-10-13T01:44:21Z"
+    "2026-10-14T01:16:48Z"
   ],
   "kpi_prev": {
     "posts_published": 40,
@@ -16,10 +16,10 @@
     "dm_conversations": 2
   },
   "kpi_new": {
-    "posts_published": 40,
+    "posts_published": 44,
     "posts_scheduled": 0,
     "posts_failed": 1,
-    "likes": 29,
+    "likes": 38,
     "comments": 2,
     "shares": 4,
     "saves": 0,
@@ -27,7 +27,12 @@
     "dm_unread": 7,
     "dm_conversations": 2
   },
-  "new_posts": [],
+  "new_posts": [
+    "ad15a704-a238-4d4a-b01c-168cc4500c80",
+    "0246cfbd-c8be-4e6e-afd2-cb170ea1f2fe",
+    "8468bed9-df87-4fbd-ab36-1be0c40241dd",
+    "1b1e639e-985a-4535-934f-3ec1b265a971"
+  ],
   "quiet": false,
-  "reason": "no new posts, KPIs unchanged; dm_unread=7 still unread"
+  "reason": "2 new reels (4 posts) on 10-13; likes +9; dm_unread=7"
 }
