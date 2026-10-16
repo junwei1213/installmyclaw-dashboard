@@ -1,7 +1,7 @@
 {
   "updated_at": [
-    "2026-10-14T01:16:48Z",
-    "2026-10-15T01:19:29Z"
+    "2026-10-15T01:19:29Z",
+    "2026-10-16T01:16:02Z"
   ],
   "kpi_prev": {
     "posts_published": 44,
@@ -16,7 +16,7 @@
     "dm_conversations": 2
   },
   "kpi_new": {
-    "posts_published": 44,
+    "posts_published": 46,
     "posts_scheduled": 0,
     "posts_failed": 1,
     "likes": 38,
@@ -27,7 +27,40 @@
     "dm_unread": 7,
     "dm_conversations": 2
   },
-  "new_posts": [],
+  "new_posts": [
+    {
+      "id": "6411349a-c98b-4f3d-8409-289a1e59d9f5",
+      "title": "老板，客人问多少钱、问送不送，你还在一个一个手动回吗？",
+      "platforms": [
+        "tiktok",
+        "instagram",
+        "facebook"
+      ],
+      "published_at": "2026-10-15T15:40:56.109298Z",
+      "published_at_myt": "2026-10-15 23:40 MYT",
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    },
+    {
+      "id": "55370349-e062-430b-999a-6d6ffce0d80d",
+      "title": "老板，客人问多少钱、问送不送，你还在一个一个手动回吗？",
+      "platforms": [
+        "youtube"
+      ],
+      "published_at": "2026-10-15T15:39:41.828753Z",
+      "published_at_myt": "2026-10-15 23:39 MYT",
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    }
+  ],
   "quiet": false,
-  "reason": "no new posts/KPI change; dm_unread=7 unread inbox"
+  "reason": "2 new posts; KPI posts_published:44->46; dm_unread=7 unread inbox"
 }
