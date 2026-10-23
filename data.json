@@ -1,6 +1,6 @@
 {
   "brand": "InstallMyClaw",
-  "updated_at": "2026-10-22T01:15:28Z",
+  "updated_at": "2026-10-23T01:15:24Z",
   "capabilities": {
     "publish": "via_agent",
     "inbox": "via_agent",
@@ -53,10 +53,10 @@
     }
   ],
   "kpis": {
-    "posts_published": 46,
+    "posts_published": 49,
     "posts_scheduled": 0,
     "posts_failed": 1,
-    "likes": 38,
+    "likes": 39,
     "comments": 2,
     "shares": 4,
     "saves": 0,
@@ -65,6 +65,65 @@
     "dm_conversations": 2
   },
   "posts": [
+    {
+      "id": "50055592-e8b6-45bb-9797-40dba653cfd0",
+      "title": "招聘公司用了 AI 员工，每天省下近半天",
+      "status": "published",
+      "published_at": "2026-10-22T23:44:04.7852Z",
+      "scheduled_at": null,
+      "platforms": [
+        "facebook",
+        "instagram"
+      ],
+      "permalinks": {
+        "facebook": "https://www.facebook.com/reel/1427971778850191/",
+        "instagram": "https://www.instagram.com/reel/De0MMAKmw8V/"
+      },
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    },
+    {
+      "id": "2332dc20-90f8-4a49-9c61-b0eb8a2bc49e",
+      "title": "招聘公司用了 AI 员工：一句指令做图、写文案、5 点准时发帖；每天上百条求职者消息，AI 自动回复。6 个消息渠道都能接（依配套开通）。",
+      "status": "published",
+      "published_at": "2026-10-22T23:43:11.206562Z",
+      "scheduled_at": null,
+      "platforms": [
+        "tiktok"
+      ],
+      "permalinks": {
+        "tiktok": "https://www.tiktok.com/@installmyclaw/video/7699641775668989205"
+      },
+      "metrics": {
+        "likes": 1,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    },
+    {
+      "id": "4f90d724-5d9b-49e9-a0ce-5191c6ed42bf",
+      "title": "WhatsApp AI 自动回复 + 自动发帖：招聘公司每天省下近半天（客户分享）",
+      "status": "published",
+      "published_at": "2026-10-22T23:42:31.803529Z",
+      "scheduled_at": null,
+      "platforms": [
+        "youtube"
+      ],
+      "permalinks": {
+        "youtube": "https://www.youtube.com/watch?v=lY-Sn0MBlPc"
+      },
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0
+      }
+    },
     {
       "id": "55370349-e062-430b-999a-6d6ffce0d80d",
       "title": "老板，客人问多少钱、问送不送，你还在一个一个手动回吗？",
